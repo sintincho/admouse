@@ -55,33 +55,87 @@
         </header>
         <section id="contact" class="text-center">
             <div class="container">
-                <h1>ÚNETE A NUESTRA BASE DE DATOS</h1>
-                <br>
-                <h5>Y nunca te quedes afuera!<br>Siempre estamos a la espera para atender sus consultas y comentarios.</h5>
-                <br>
-                <form class="contact-form col-md-11 col-lg-9 mx-auto">
-                    <div class="form-row">
-                        <div class="col form-group">
-                            <input type="text" class="form-control" placeholder="Nombre y Apellido">
+                <font color="#0068B3"><h1>ÚNETE A NUESTRA BASE DE DATOS</h1></font>
+                <div class="row" style="margin-left:10%;margin-right:10%;padding-top:5%;">
+                    <div class="col-md-6">
+                        <div id="formulsend">
+                            <div class="form">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="wVarNombre" id="wVarNombre" placeholder="Nombre*">
+                                    <div style="font-size: 12px;display:none; color: red;" id="NombreError"></div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="wVarApellido" id="wVarApellido" placeholder="Apellido*">
+                                    <div style="font-size: 12px;display:none; color: red;" id="ApellidoError"></div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="wVarPais" id="wVarPais" placeholder="Pais*">
+                                    <div style="font-size: 12px;display:none; color: red;" id="PaisError"></div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="wVarLocalidad" id="wVarLocalidad" placeholder="Localidad*">
+                                    <div style="font-size: 12px;display:none; color: red;" id="LocalidadError"></div>
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control" name="wVarStatus" id="wVarStatus" placeholder="Status*" required>
+                                        <option value="-1">Seleccione una opción</option>
+                                        <option value="Particular">Particular</option>
+                                        <option value="Distribuidor">Distribuidor</option>
+                                        <option value="Docente">Docente</option>
+                                        <option value="Rehabilitacion">Rehabilitación</option>
+                                        <option value="ONG">ONG</option>
+                                        <option value="Institucion">Institución</option>
+                                    </select>
+                                    <div style="font-size: 12px;display:none; color: red;" id="StatusError"></div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="wVarEmail" id="wVarEmail" placeholder="E-mail*">
+                                    <div style="font-size: 12px;display:none; color: red;" id="EmailError"></div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="wVarTelefono" id="wVarTelefono" placeholder="Telefono*">
+                                    <div style="font-size: 12px;display:none; color: red;" id="TelefonoError"></div>
+                                </div>
+                                <div class="form-group">									
+                                    <textarea name="wVarComentario" id="wVarComentario" cols="30" rows="4" class="form-control" placeholder="Comentario*"></textarea>
+                                    <div style="font-size: 12px;display:none; color: red;" id="ComentarioError"></div>
+                                </div>
+                                <div class="form-group">									
+                                    <div class="g-recaptcha" data-sitekey="6LeK0vYiAAAAAL3CoQj598DTtjzRE1rKfi6gUz5u"></div>
+                                    <div style="font-size: 12px;display:none; color: red;" id="CaptaError"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-12 mb-0">
+                                    <a class="btn btn-primary" href=""><font color=#FFF><b>ENVIAR</b></font></a>
+                                </div>
+                            </div>                          
                         </div>
-                        <div class="col form-group">
-                            <input type="email" class="form-control" placeholder="Email">
-                        </div>
                     </div>
-                    <div class="form-group">
-                        <textarea name="" id="" cols="30" rows="5" class="form-control" placeholder="Your Message"></textarea>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5" style="padding-top:5%;">
+                        <font color="#0068B3">
+                            <br>
+                            <h5>Y nunca te quedes afuera!<br>Siempre estamos a la espera para atender sus consultas y comentarios.</h5>
+                            <h5>
+                                <br>
+                                <i class="ti-location-pin"></i> Ciudad de Buenos Aires, Argentina
+                                <br><br>
+                                <i class="ti-email"></i> info@admouse.net
+                                <br><br>
+                                <i class="fa fa-phone" aria-hidden="true"></i> (+54)11 4855-8580
+                                <br><br>
+                                <i class="fa fa-phone" aria-hidden="true"></i> (+54)11 4854-2898
+                                <br>
+                            </h5>
+                        </font>
                     </div>
-                    <div class="form-group">
-                        <input type="submit" class="btn btn-primary btn-block" value="Send Message">
-                    </div>
-                </form>   
+                </div>
             </div>   
         </section>
         <section class="pb-0">
             <div class="container">
                 <div class="pre-footer">
-                    <ul class="list">
-                    </ul>
                     <ul class="list">
                         <li class="list-head">
                             <h6 class="font-weight-bold">ADMOUSE</h6>
