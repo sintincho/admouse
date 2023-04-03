@@ -11260,6 +11260,13 @@ section {
   padding: 100px 0;
 }
 
+
+
+video {
+  padding-right:50px;
+  
+}
+
 section:nth-child(odd) {
   background-color: #eaf0fc;
 }
