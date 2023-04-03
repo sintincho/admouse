@@ -9,6 +9,24 @@
         <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/creative-design.css">
+        <style>
+            .video {
+                position: relative;
+                padding-bottom: 56.25%; /* Proporción 16:9 */
+                padding-top: 30px;
+                height: 0;
+                overflow: hidden;
+            }
+      
+            .video iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+    
+        </style>
     </head>
     <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
         <nav id="scrollspy" class="navbar page-navbar navbar-light navbar-expand-md fixed-top" style="background-color:#FFF;" data-spy="affix" data-offset-top="20">
@@ -75,13 +93,9 @@
                 </div>        
             </div>     
         </section>
-        <section>
-            <div style="aspect-ratio:3/2;justify-content:center;">
-                <figure class="col-sm-12" style="text-align:center;">
-                    <video src="assets/imgs/videoIndex.mp4" width="900px" height="500px" controls></video>
-                </figure>
-            </div>
-        </section>
+        <div class="video">
+            <iframe src="assets/imgs/videoIndex.mp4" allowfullscreen></iframe>
+        </div>
         <section class="pb-0">
             <div class="container">
                 <div class="pre-footer">
