@@ -10,62 +10,99 @@
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/creative-design.css">
         <style>
-            .video {
-                position: relative;
-                padding-bottom: 56.25%; /* Proporción 16:9 */
-                padding-top: 30px;
-                height: 0;
-                overflow: hidden;
-            }
-      
             .video iframe {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
+                width: 800px;
+                height: 450px;
             }
-    
+
+            .video {
+                margin-left: auto;
+                margin-right: auto;
+                padding-left:-40px;
+            }
+
+            .navbar-nav {
+                display: flex;
+                align-items: center;
+            }
+
+            .navbar-brand img {
+                max-width: 200px;
+            }
+
+            @media (max-width: 1200px) {
+                .navbar-brand img {
+                    max-width: 150px;
+                }
+            }
+
+            @media (max-width: 992px) {
+                .navbar-brand img {
+                    max-width: 120px;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .navbar-brand img {
+                    max-width: 100px;
+                }
+            }
+
+            @media (max-width: 576px) {
+                .navbar-brand img {
+                    max-width: 80px;
+                }
+            }
+
+            .dropdown-toggle::after {
+                display: none;
+            }
+
+            .dropdown-menu {
+                padding-top: 0;
+            }
+
         </style>
     </head>
     <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
         <nav id="scrollspy" class="navbar page-navbar navbar-light navbar-expand-md fixed-top" style="background-color:#FFF;" data-spy="affix" data-offset-top="20">
             <div class="container">
                 <a class="navbar-brand" href="#">
-                    <img src="./assets/imgs/LogoAdmouse.jpg" href="index.html" style="width:300px;">
+                    <img src="./assets/imgs/LogoAdmouse.png" href="index.html" style="width:100%;height:100%;">
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="index.html"><font color=#0068B3><b>INICIO</b></font></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="quienessomos.html"><font color=#0068B3><b>QUIENES SOMOS</b></font></a>
+                            <a class="nav-link" href="quienessomos.html" style="white-space: nowrap;"><font color=#0068B3><b>QUIENES SOMOS</b></font></a>
                         </li>
+        
                         <li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
-								<font color=#0068B3><b>GALERIA</b></font>
-							</a>
-							<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-								<li><a class="dropdown-item" href="fotos.html"><font color=#0068B3><b>FOTOS</b></font></a></li>
-								<li><a class="dropdown-item" href="videos.html"><font color=#0068B3><b>VIDEOS</b></font></a></li>
-								<li><a class="dropdown-item" href="exposiciones.html"><font color=#0068B3><b>EXPOSICIONES</b></font></a></li>
-							</ul>
-						</li>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <font color=#0068B3><b>GALERIA</b></font>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="fotos.html"><font color=#0068B3><b>FOTOS</b></font></a>
+                                <a class="dropdown-item" href="videos.html"><font color=#0068B3><b>VIDEOS</b></font></a>
+                                <a class="dropdown-item" href="exposiciones.html"><font color=#0068B3><b>EXPOSICIONES</b></font></a>
+                            </div>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="reconocimientos.html"><font color=#0068B3><b>RECONOCIMIENTOS</b></font></a>
                         </li>
-                        <li class="nav-item ml-md-4">
+                        <li class="nav-item">
                             <a class="nav-link btn btn-primary" href="contacto.html"><font color=#FFF><b>CONTACTO</b></font></a>
                         </li>
                     </ul>
                 </div>
+                <button class="navbar-toggler ml-auto order-md-last" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             </div>
         </nav>
-        <header class="header" style="background: url(assets/imgs/banner.jpg) no-repeat center; background-size: cover;text-align:center;">
+        <header class="header" style="background: url(assets/imgs/banner.jpg) no-repeat center; background-size: cover;text-align:center; display: flex; justify-content: center; align-items: center;">
             <div class="overlay"></div>
             <div class="header-content">
                 <h5>AdMouse y DualMouse les brindan autonomía en el acceso a las PCs, y tablets sin necesidad de un soft adicional.</h5> 
@@ -74,33 +111,31 @@
         <section>
             <div class="container">
                 <div class="about-wrapper">
-                    <div class="after" style="margin-left:-85px;"><h1>QUIENES SOMOS</h1></div>
+                    <div class="after"></div>
                     <div class="content">
-                        <h5 class="title mb-3" style="padding-top:20px;">Bienvenidos ...</h5>
-                        <div class="row" style="padding-bottom:20px;">
-                            <div class="col">
-                                <p>AdMouse es una empresa Argentina que lleva más de una década desarrollando Tecnologías de Apoyo (Assistive Technologies) para personas con discapacidad motriz. Nuestros dispositivos permiten a adultos mayores y personas con discapacidad superar problemas de motricidad, Parkinson, Parálisis Cerebral, ACV, y baja visión.</p>
-                                <br>
-                                <p>Nuestras soluciones son altamente valoradas por su eficacia y facilidad de uso tanto por usuarios y terapeutas como por instituciones de máxima jerarquía internacional.</p>
-                            </div>
-                            <div class="col">
-                                <p>AdMouse es utilizado en Clínicas de Rehabilitación y Fisioterapia, Centros de Adultos mayores, Geriátricos, Escuelas Especiales e Instituciones Gubernamentales y son prescriptos por Especialistas en Parkinson, Fisioterapeutas, Médicos Fisiatras, Gerontólogos, Terapistas Ocupacionales y Docentes de Escuelas Especiales.</p>
-                                <br>
-                                <p>AdMouse, cuenta con Distribución Oficial en USA, España, México, Uruguay, etc.</p>
-                            </div>
-                        </div>           
+                        <h4 style="padding-top:20px;text-align:center;padding-bottom:20px;">
+                            En definitiva, AdMouse pretende facilitar a las personas a las que está destinado, mejorar la calidad con la que manejan sus ordenadores y dispositivos móviles permitiéndoles acceder al uso de cualquier aplicación o información con mayor precisión y autonomía.
+                            <br>
+                            AdMouse es utilizado en Clínicas de Rehabilitación y Fisioterapia, Centros de Adultos mayores, Geriátricos, Escuelas Especiales e Instituciones Gubernamentales y son prescriptos por Especialistas en Parkinson, Fisioterapeutas, Médicos Fisiatras, Gerontólogos, Terapistas Ocupacionales y Docentes de Escuelas Especiales.
+                            <br>
+                            Está orientado a niños y adultos que sufren movimientos involuntarios, temblores o parálisis de miembros superiores.
+                        </h4>      
                     </div>
                 </div>        
             </div>     
         </section>
-        <div class="video">
-            <iframe src="assets/imgs/videoIndex.mp4" allowfullscreen></iframe>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="video">
+                        <iframe src="assets/imgs/videoIndex.mp4" allowfullscreen style="display:block; margin:0 auto;"></iframe>
+                    </div>
+                </div>
+            </div>
         </div>
         <section class="pb-0">
             <div class="container">
                 <div class="pre-footer">
-                    <ul class="list">
-                    </ul>
                     <ul class="list">
                         <li class="list-head">
                             <h6 class="font-weight-bold">ADMOUSE</h6>
@@ -110,20 +145,22 @@
                                 <div class="col">
                                     <a class="nav-link" href="#home"><font color=#0068B3><b>INICIO</b></font></a>
                                     <a class="nav-link" href="quienessomos.html"><font color=#0068B3><b>QUIENES SOMOS</b></font></a>
-                                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+                                    <a class="nav-link dropdown-toggle dropdown-toggle-no-caret" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <font color=#0068B3><b>GALERIA</b></font>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                            <li><a class="dropdown-item" href="fotos.html"><font color=#0068B3><b>FOTOS</b></font></a></li>
-                                            <li><a class="dropdown-item" href="videos.html"><font color=#0068B3><b>VIDEOS</b></font></a></li>
-                                            <li><a class="dropdown-item" href="exposiciones.html"><font color=#0068B3><b>EXPOSICIONES</b></font></a></li>
-                                        </ul>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="fotos.html"><font color=#0068B3><b>FOTOS</b></font></a>
+                                            <a class="dropdown-item" href="videos.html"><font color=#0068B3><b>VIDEOS</b></font></a>
+                                            <a class="dropdown-item" href="exposiciones.html"><font color=#0068B3><b>EXPOSICIONES</b></font></a>
+                                        </div>
                                     </a>
+                                    
                                     <a class="nav-link" href="reconocimientos.html"><font color=#0068B3><b>RECONOCIMIENTOS</b></font></a>
                                     <a class="nav-link" href="contacto.html"><font color=#0068B3><b>CONTACTO</b></font></a>
                                 </div>
                             </div>
                         </li>
                     </ul>
+                    <ul class="list"></ul>
                     <ul class="list">
                         <li class="list-head">
                             <h6 class="font-weight-bold">INFORMACIÓN</h6>
