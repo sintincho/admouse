@@ -10,31 +10,67 @@
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/creative-design.css">
     </head>
+    <style>
+        .navbar-nav {
+            display: flex;
+            align-items: center;
+        }
 
+        .navbar-brand img {
+            max-width: 200px;
+        }
+
+        @media (max-width: 1200px) {
+            .navbar-brand img {
+                max-width: 150px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .navbar-brand img {
+                max-width: 120px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar-brand img {
+                max-width: 100px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .navbar-brand img {
+                max-width: 80px;
+            }
+        }
+
+        .dropdown-toggle::after {
+            display: none;
+        }
+
+        .dropdown-menu {
+            padding-top: 0;
+        }
+
+    </style>
     <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
-        <!-- Navbar -->
         <script>
-			fetch('navbar.html')
-			  	.then(response => response.text())
-					.then(html => {
-						const parser = new DOMParser();
-						const doc = parser.parseFromString(html, 'text/html');
-						const navbar = doc.querySelector('.navbar');
-						document.body.prepend(navbar);
-					});
-		</script>
-        
-        <header class="header" style="background: url(assets/imgs/banner.jpg) no-repeat center; background-size: cover;text-align:center;">
-            <!-- Encabezado con una imagen de fondo -->
+            fetch('navbar.html')
+                    .then(response => response.text())
+                    .then(html => {
+                        const parser = new DOMParser();
+                        const doc = parser.parseFromString(html, 'text/html');
+                        const navbar = doc.querySelector('.navbar');
+                        document.body.prepend(navbar);
+                    });
+        </script>
+        <header class="header" style="background: url(assets/imgs/banner.jpg) no-repeat center; background-size: cover;text-align:center; display: flex; justify-content: center; align-items: center;">
             <div class="overlay"></div>
             <div class="header-content">
-                <!-- Texto del encabezado -->
                 <h5>AdMouse y DualMouse les brindan autonomía en el acceso a las PCs, y tablets sin necesidad de un soft adicional.</h5> 
             </div>      
         </header>
-
-        <!-- Seccion "Quienes Somos" -->
-        <section id="about">
+        <section>
             <div class="container">
                 <div class="about-wrapper">
                     <div class="after" style="margin-left:-85px;"><h1>QUIENES SOMOS</h1></div>
@@ -42,30 +78,23 @@
                         <h5 class="title mb-3" style="padding-top:20px;">Bienvenidos...</h5>
                         <div class="row" style="padding-bottom:20px;">
                             <div class="col">
-                                <!-- Informacion sobre AdMouse y su objetivo -->
-                                <p><img src="./assets/imgs/LogoAdmouse.jpg" alt="index.html" style="width:70px; margin-bottom: 10px;"> es una empresa Argentina que lleva más de una década desarrollando Tecnologías de Apoyo (Assistive Technologies) para personas con discapacidad motriz. Nuestros dispositivos permiten a adultos mayores y personas con discapacidad superar problemas de motricidad, Parkinson, Parálisis Cerebral, ACV, y baja visión.</p>
+                                <p><img src="./assets/imgs/LogoAdmouse.jpg" style="width:70px; margin-bottom: 10px;"> es una empresa Argentina que lleva más de una década desarrollando Tecnologías de Apoyo (Assistive Technologies) para personas con discapacidad motriz. Nuestros dispositivos permiten a adultos mayores y personas con discapacidad superar problemas de motricidad, Parkinson, Parálisis Cerebral, ACV, y baja visión.</p>
                                 <br>
                                 <p>Nuestras soluciones son altamente valoradas por su eficacia y facilidad de uso tanto por usuarios y terapeutas como por instituciones de máxima jerarquía internacional.</p>
                             </div>
                             <div class="col">
-                                <!-- Donde se utilizan los productos de AdMouse -->
-                                <p><img src="./assets/imgs/LogoAdmouse.jpg" alt="index.html" style="width:70px; padding-bottom: 10px;"> es utilizado en Clínicas de Rehabilitación y Fisioterapia, Centros de Adultos mayores, Geriátricos, Escuelas Especiales e Instituciones Gubernamentales y son prescriptos por Especialistas en Parkinson, Fisioterapeutas, Médicos Fisiatras, Gerontólogos, Terapistas Ocupacionales y Docentes de Escuelas Especiales.</p>
+                                <p><img src="./assets/imgs/LogoAdmouse.jpg" style="width:70px; padding-bottom: 10px;"> es utilizado en Clínicas de Rehabilitación y Fisioterapia, Centros de Adultos mayores, Geriátricos, Escuelas Especiales e Instituciones Gubernamentales y son prescriptos por Especialistas en Parkinson, Fisioterapeutas, Médicos Fisiatras, Gerontólogos, Terapistas Ocupacionales y Docentes de Escuelas Especiales.</p>
                                 <br>
-                                <!-- Distribucion Oficial de AdMouse -->
-                                <p><img src="./assets/imgs/LogoAdmouse.jpg" alt="index.html" style="width:70px; padding-bottom: 10px;">, cuenta con Distribución Oficial en USA, España, México, Uruguay, etc.</p>
+                                <p><img src="./assets/imgs/LogoAdmouse.jpg" style="width:70px; padding-bottom: 10px;">, cuenta con Distribución Oficial en USA, España, México, Uruguay, etc.</p>
                             </div>
                         </div>           
                     </div>
                 </div>
             </div>
         </section>
-        
-        <!-- Seccion "Pre-Footer" -->
         <section class="pb-0">
             <div class="container">
                 <div class="pre-footer">
-                    <ul class="list">
-                    </ul>
                     <ul class="list">
                         <li class="list-head">
                             <h6 class="font-weight-bold">ADMOUSE</h6>
@@ -73,34 +102,33 @@
                         <li class="list-body">
                             <div class="row">
                                 <div class="col">
-                                    <!-- Enlaces de navegacion del menu -->
-                                    <a class="nav-link" href="#home"><font color=#0068B3><b>INICIO</b></font></a>
+                                    <a class="nav-link" href="index.html"><font color=#0068B3><b>INICIO</b></font></a>
                                     <a class="nav-link" href="quienessomos.html"><font color=#0068B3><b>QUIENES SOMOS</b></font></a>
-                                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+                                    <a class="nav-link dropdown-toggle dropdown-toggle-no-caret" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <font color=#0068B3><b>GALERIA</b></font>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="fotos.html"><font color=#0068B3><b>FOTOS</b></font></a>
+                                            <a class="dropdown-item" href="videos.html"><font color=#0068B3><b>VIDEOS</b></font></a>
+                                            <a class="dropdown-item" href="exposiciones.html"><font color=#0068B3><b>EXPOSICIONES</b></font></a>
+                                        </div>
                                     </a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <li><a class="dropdown-item" href="fotos.html"><font color=#0068B3><b>FOTOS</b></font></a></li>
-                                        <li><a class="dropdown-item" href="videos.html"><font color=#0068B3><b>VIDEOS</b></font></a></li>
-                                        <li><a class="dropdown-item" href="exposiciones.html"><font color=#0068B3><b>EXPOSICIONES</b></font></a></li>
-                                    </ul>
+                                    
                                     <a class="nav-link" href="reconocimientos.html"><font color=#0068B3><b>RECONOCIMIENTOS</b></font></a>
                                     <a class="nav-link" href="contacto.html"><font color=#0068B3><b>CONTACTO</b></font></a>
                                 </div>
                             </div>
                         </li>
                     </ul>
+                    <ul class="list"></ul>
                     <ul class="list">
                         <li class="list-head">
                             <h6 class="font-weight-bold">INFORMACIÓN</h6>
                         </li>
                         <li class="list-body" style="line-height:30px;">
-                            <!-- Informacion de contacto -->
                             <p><i class="ti-location-pin"></i> Ciudad de Buenos Aires, Argentina</p>
                             <p><i class="ti-email"></i> info@admouse.net</p>
                             <p><i class="fa fa-phone" aria-hidden="true"></i> (+54)11 4855-8580</p>
                             <p><i class="fa fa-phone" aria-hidden="true"></i> (+54)11 4854-2898</p>
-                            <!-- Enlaces de redes sociales -->
                             <div class="social-links">
                                 <a href="https://www.facebook.com/AdmouseAR/" class="link"><i class="ti-facebook"></i></a>
                                 <a href="https://www.youtube.com/channel/UC2V4ZUTHzo5Ncwb-PiRJSvg" class="link"><i class="ti-youtube"></i></a>
@@ -108,15 +136,11 @@
                         </li>
                     </ul> 
                 </div>
-            </div>
+                <footer class="footer">            
+                    <p class="mb-0 small">&copy; <script>document.write(new Date().getFullYear())</script>, Powered by <a href="https://www.atlansystem.net" target="_blank"><font color="#000000">Atlansystem e-Solutions.</font></a></p>
+                </footer>
+            </div>    
         </section>
-        
-        
-
-        <footer class="footer">            
-            <p class="mb-0 small">&copy; <script>document.write(new Date().getFullYear())</script>, Powered by <a href="https://www.atlansystem.net" target="_blank"><font color="#000000">Atlansystem e-Solutions.</font></a></p>
-        </footer>
-
         <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
         <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
         <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
