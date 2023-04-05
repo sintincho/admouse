@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Start your development with Creative Design landing page.">
+        <meta name="author" content="Devcrud">
+        <title>::Ad Mouse::</title>
+        <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+        <link rel="stylesheet" href="assets/css/creative-design.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.7.0/js/bootstrap.min.js"></script>
+    </head>
+
+    <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+       <!-- Navbar -->
+       <script>
+        fetch('navbar.html')
+              .then(response => response.text())
+                .then(html => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html, 'text/html');
+                    const navbar = doc.querySelector('.navbar');
+                    document.body.prepend(navbar);
+                });
+        </script>
+
+        <header class="header" style="background: url(assets/imgs/banner.jpg) no-repeat center; background-size: cover;text-align:center;">
+            <div class="overlay"></div>
+            <div class="header-content">
+                <h5>AdMouse y DualMouse les brindan autonomía en el acceso a las PCs, y tablets sin necesidad de un soft adicional.</h5> 
+            </div>      
+        </header>
+        
+        <div class="container">
+            <!-- Fila 1 -->
+            <div class="row" style="padding-top:20px;">
+                <!-- Carrusel 1 -->
+                <div id="carousel1" class="col-sm-4 carousel slide" data-ride="carousel">
+                    <ul class="carousel-indicators">
+                        <!-- Indicadores del carrusel -->
+                        <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel1" data-slide-to="1"></li>
+                        <li data-target="#carousel1" data-slide-to="2"></li>
+                        <li data-target="#carousel1" data-slide-to="3"></li>
+                        <li data-target="#carousel1" data-slide-to="4"></li>
+                        <li data-target="#carousel1" data-slide-to="5"></li>
+                    </ul>
+    
+                    <!-- Imágenes del carrusel -->
+                    <div class="carousel-inner" style="aspect-ratio:3/2; background-color: black;">
+                        <img class="carousel-item active" src="assets/imgs/mouse.jpg" alt="Imagen 1" width="100%" height="auto">
+                        <img class="carousel-item" src="assets/imgs/mouse2.jpg" alt="Imagen 2" width="100%" height="auto">
+                        <img class="carousel-item" src="assets/imgs/mouse3.jpg" alt="Imagen 3" width="100%" height="auto">
+                        <img class="carousel-item" src="assets/imgs/mouse4.jpg" alt="Imagen 4" width="100%" height="auto">
+                        <img class="carousel-item" src="assets/imgs/mouse5.jpg" alt="Imagen 5" width="100%" height="auto">
+                        <img class="carousel-item" src="assets/imgs/mouse6.jpg" alt="Imagen 6" width="100%" height="auto">
+                    </div>
+    
+                    <!-- Logo y controles del carrusel -->
+                    <div>
+                        <div class="carousel-caption">
+                            <img src="./assets/imgs/LogoAdmouse.jpg" alt="index.html" style="height:40px; width: 50%; background-color: white; border-radius: 5px;">
+                        </div>
+                        <a class="carousel-control-prev" href="#carousel1" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel1" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Carrusel 2 -->
+                <div id="carousel2" class="col-sm-4 carousel slide" data-ride="carousel">
+                    <ul class="carousel-indicators">
+                        <!-- Indicadores del carrusel -->
+                        <li data-target="#carousel2" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel2" data-slide-to="1"></li>
+                        <li data-target="#carousel2" data-slide-to="2"></li>
+                        <li data-target="#carousel2" data-slide-to="3"></li>
+                        <li data-target="#carousel2" data-slide-to="4"></li>
+                    </ul>
+    
+                    <!-- Imágenes del carrusel -->
+                    <div class="carousel-inner" style="aspect-ratio:3/2; background-color: black;">
+                        <img class="carousel-item active" src="assets/imgs/colortec.jpg" alt="Imagen 1" width="100%" height="auto">
+                        <img class="carousel-item" src="assets/imgs/colortec2.jpg" alt="Imagen 2" width="100%" height="auto">
+                        <img class="carousel-item" src="assets/imgs/colortec3.jpg" alt="Imagen 3" width="100%" height="auto">
+                        <img class="carousel-item" src="assets/imgs/colortec4.jpg" alt="Imagen 4" width="100%" height="auto">
+                        <img class="carousel-item" src="assets/imgs/colortec5.jpg" alt="Imagen 5" width="100%" height="auto">
+                    </div>
+    
+                    <!-- Logo y controles del carrusel -->
+                    <div>
+                        <div class="carousel-caption">
+                            <img src="./assets/imgs/logo AdMouse 500x200/ColorTec/LOGO-removebg-preview.png" alt="colortec" style="height:40px; width: 50%; background-color: white; border-radius: 5px;">
+                        </div>
+                        <a class="carousel-control-prev" href="#carousel2" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel2" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Carrusel 3 -->
+                <div id="carousel3" class="col-sm-4 carousel slide" data-ride="carousel">
+                    <ul class="carousel-indicators">
+                        <!-- Indicadores del carrusel -->
+                        <li data-target="#carousel3" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel3" data-slide-to="1"></li>
+                        <li data-target="#carousel3" data-slide-to="2"></li>
+                        <li data-target="#carousel3" data-slide-to="3"></li>
+                        <li data-target="#carousel3" data-slide-to="4"></li>
+                        <li data-target="#carousel3" data-slide-to="5"></li>
+                    </ul>
+    
+                    <!-- Imágenes del carrusel -->
+                    <div class="carousel-inner" style="aspect-ratio:3/2; background-color: black;">
+                        <img class="carousel-item active" src="assets/imgs/dualmouse.jpg" alt="Imagen 1" width="100%" height="auto">
+                        <img class="carousel-item" src="assets/imgs/dualmouse2.jpg" alt="Imagen 2" width="100%" height="auto">
+                        <img class="carousel-item" src="assets/imgs/dualmouse3.jpg" alt="Imagen 3" width="100%" height="auto">
+                        <img class="carousel-item" src="assets/imgs/dualmouse4.jpg" alt="Imagen 4" width="100%" height="auto">
+                        <img class="carousel-item" src="assets/imgs/dualmouse5.jpg" alt="Imagen 5" width="100%" height="auto">
+                        <img class="carousel-item" src="assets/imgs/dualmouse6.jpg" alt="Imagen 6" width="100%" height="auto">
+                    </div>
+    
+                    <!-- Logo y controles del carrusel -->
+                    <div>
+                        <div class="carousel-caption">
+                            <img src="./assets/imgs/LogoAdmouse.jpg" alt="DualMouse" style="height:40px; width: 50%; background-color: white; border-radius: 5px;">
+                        </div>
+                        <a class="carousel-control-prev" href="#carousel3" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel3" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Fila 2 -->
+            <div class="row" style="padding-top:20px;padding-bottom: 20px;">
+                <!-- Agregar espacio vacío -->
+                <div class="col-sm-1">
+                </div>
+                <!-- Carrusel 4 -->
+                <div id="carousel4" class="col-sm-4 carousel slide" data-ride="carousel">
+                    <!-- Indicadores del carrusel -->
+                    <ul class="carousel-indicators">
+                        <li data-target="#carousel4" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel4" data-slide-to="1"></li>
+                        <li data-target="#carousel4" data-slide-to="2"></li>
+                        <li data-target="#carousel4" data-slide-to="3"></li>
+                        <li data-target="#carousel4" data-slide-to="4"></li>
+                    </ul>
+                    
+                    <!-- Imágenes del carrusel -->
+                    <div class="carousel-inner" style="aspect-ratio:3/2; background-color: black;">
+                        <img class="carousel-item active" src="assets/imgs/boton.jpg" alt="Imagen 1" width="100%" height="auto">
+                        <img class="carousel-item" src="assets/imgs/boton2.jpg" alt="Imagen 2" width="100%" height="auto">
+                        <img class="carousel-item" src="assets/imgs/boton3.jpg" alt="Imagen 3" width="100%" height="auto">
+                        <img class="carousel-item" src="assets/imgs/boton4.jpg" alt="Imagen 4" width="100%" height="auto">
+                        <img class="carousel-item" src="assets/imgs/boton5.jpg" alt="Imagen 5" width="100%" height="auto">
+                    </div>
+                    
+                    <!-- Logo y controles del carrusel -->
+                    <div>
+                        <div class="carousel-caption">
+                            <img src="./assets/imgs/logo AdMouse 500x200/BOTON LOGO.jpg" alt="BotonMouse" style="height:40px; width: 50%; background-color: white; border-radius: 5px;">
+                        </div>
+                        <a class="carousel-control-prev" href="#carousel4" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel4" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Agregar espacio vacío -->
+                <div class = "col-sm-2">
+                </div>
+                <!-- Carrusel 5 -->
+                <div id="carousel5" class="col-sm-4 carousel slide" data-ride="carousel">
+                    <!-- Indicadores del carrusel -->
+                    <ul class="carousel-indicators">
+                        <li data-target="#carousel5" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel5" data-slide-to="1"></li>
+                    </ul>
+                    
+                    <!-- Imágenes del carrusel -->
+                    <div class="carousel-inner" style="aspect-ratio:3/2; background-color: black;">
+                        <img class="carousel-item active" src="assets/imgs/adaptec.jpg" alt="Imagen 1" width="100%" height="auto">
+                        <img class="carousel-item" src="assets/imgs/adaptec2.jpg" alt="Imagen 2" width="100%" height="auto">
+                    </div>
+        
+                    <!-- Logo y controles del carrusel -->
+                    <div>
+                        <div class="carousel-caption">
+                            <img src="./assets/imgs/LogoAdmouse.jpg" alt="adaptec" style="height:40px; width: 50%; background-color: white; border-radius: 5px;">
+                        </div>
+                        <a class="carousel-control-prev" href="#carousel5" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel5" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Agregar espacio vacío -->
+                <div class="col-sm-1">
+                </div>
+            </div>
+            
+        </div>
+
+        <section class="pb-0">
+            <div class="container">
+                <div class="pre-footer">
+                    <ul class="list">
+                    </ul>
+                    <ul class="list">
+                        <li class="list-head">
+                            <h6 class="font-weight-bold">ADMOUSE</h6>
+                        </li>
+                        <li class="list-body">
+                            <div class="row">
+                                <div class="col">
+                                    <a class="nav-link" href="#home"><font color=#0068B3><b>INICIO</b></font></a>
+                                    <a class="nav-link" href="quienessomos.html"><font color=#0068B3><b>QUIENES SOMOS</b></font></a>
+                                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+                                        <font color=#0068B3><b>GALERIA</b></font>
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <li><a class="dropdown-item" href="fotos.html"><font color=#0068B3><b>FOTOS</b></font></a></li>
+                                        <li><a class="dropdown-item" href="videos.html"><font color=#0068B3><b>VIDEOS</b></font></a></li>
+                                        <li><a class="dropdown-item" href="exposiciones.html"><font color=#0068B3><b>EXPOSICIONES</b></font></a></li>
+                                    </ul>
+                                    <a class="nav-link" href="reconocimientos.html"><font color=#0068B3><b>RECONOCIMIENTOS</b></font></a>
+                                    <a class="nav-link" href="contacto.html"><font color=#0068B3><b>CONTACTO</b></font></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="list">
+                        <li class="list-head">
+                            <h6 class="font-weight-bold">INFORMACIÓN</h6>
+                        </li>
+                        <li class="list-body" style="line-height:30px;">
+                            <p><i class="ti-location-pin"></i> Ciudad de Buenos Aires, Argentina</p>
+                            <p><i class="ti-email"></i> info@admouse.net</p>
+                            <p><i class="fa fa-phone" aria-hidden="true"></i> (+54)11 4855-8580</p>
+                            <p><i class="fa fa-phone" aria-hidden="true"></i> (+54)11 4854-2898</p>
+                            <div class="social-links">
+                                <a href="https://www.facebook.com/AdmouseAR/" class="link"><i class="ti-facebook"></i></a>
+                                <a href="https://www.youtube.com/channel/UC2V4ZUTHzo5Ncwb-PiRJSvg" class="link"><i class="ti-youtube"></i></a>
+                            </div>
+                        </li>
+                    </ul> 
+                </div>
+                <footer class="footer">            
+                    <p class="mb-0 small">&copy; <script>document.write(new Date().getFullYear())</script>, Powered by <a href="https://www.atlansystem.net" target="_blank"><font color="#000000">Atlansystem e-Solutions.</font></a></p>
+                </footer>
+            </div>    
+        </section>
+        
+        <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+        <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+        <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+        <script src="assets/js/creative-design.js"></script>
+    </body>
+</html>
+

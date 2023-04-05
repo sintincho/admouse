@@ -7,65 +7,78 @@
         <meta name="author" content="Devcrud">
         <title>::Ad Mouse::</title>
         <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/creative-design.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.7.0/js/bootstrap.min.js"></script>
         <style>
-            .video {
-                position: relative;
-                padding-bottom: 56.25%; /* Proporción 16:9 */
-                padding-top: 30px;
-                height: 0;
-                overflow: hidden;
-            }
-      
             .video iframe {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
+                width: 800px;
+                height: 450px;
             }
-    
+
+            .video {
+                margin-left: auto;
+                margin-right: auto;
+                padding-left:-40px;
+            }
+
+            .navbar-nav {
+                display: flex;
+                align-items: center;
+            }
+
+            .navbar-brand img {
+                max-width: 200px;
+            }
+
+            @media (max-width: 1200px) {
+                .navbar-brand img {
+                    max-width: 150px;
+                }
+            }
+
+            @media (max-width: 992px) {
+                .navbar-brand img {
+                    max-width: 120px;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .navbar-brand img {
+                    max-width: 100px;
+                }
+            }
+
+            @media (max-width: 576px) {
+                .navbar-brand img {
+                    max-width: 80px;
+                }
+            }
+
+            .dropdown-toggle::after {
+                display: none;
+            }
+
+            .dropdown-menu {
+                padding-top: 0;
+            }
+
         </style>
     </head>
-    <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
-        <nav id="scrollspy" class="navbar page-navbar navbar-light navbar-expand-md fixed-top" style="background-color:#FFF;" data-spy="affix" data-offset-top="20">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="./assets/imgs/LogoAdmouse.jpg" href="index.html" style="width:300px;">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html"><font color=#0068B3><b>INICIO</b></font></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="quienessomos.html"><font color=#0068B3><b>QUIENES SOMOS</b></font></a>
-                        </li>
-                        <li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
-								<font color=#0068B3><b>GALERIA</b></font>
-							</a>
-							<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-								<li><a class="dropdown-item" href="fotos.html"><font color=#0068B3><b>FOTOS</b></font></a></li>
-								<li><a class="dropdown-item" href="videos.html"><font color=#0068B3><b>VIDEOS</b></font></a></li>
-								<li><a class="dropdown-item" href="exposiciones.html"><font color=#0068B3><b>EXPOSICIONES</b></font></a></li>
-							</ul>
-						</li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="reconocimientos.html"><font color=#0068B3><b>RECONOCIMIENTOS</b></font></a>
-                        </li>
-                        <li class="nav-item ml-md-4">
-                            <a class="nav-link btn btn-primary" href="contacto.html"><font color=#FFF><b>CONTACTO</b></font></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <header class="header" style="background: url(assets/imgs/banner.jpg) no-repeat center; background-size: cover;text-align:center;">
+    <body data-spy="scroll" data-target=".navbar" data-offset="40">
+        <script>
+            fetch('navbar.html')
+                    .then(response => response.text())
+                    .then(html => {
+                        const parser = new DOMParser();
+                        const doc = parser.parseFromString(html, 'text/html');
+                        const navbar = doc.querySelector('.navbar');
+                        document.body.prepend(navbar);
+                    });
+        </script>
+        <header class="header" style="background: url(assets/imgs/banner.jpg) no-repeat center; background-size: cover;text-align:center; display: flex; justify-content: center; align-items: center;">
             <div class="overlay"></div>
             <div class="header-content">
                 <h5>AdMouse y DualMouse les brindan autonomía en el acceso a las PCs, y tablets sin necesidad de un soft adicional.</h5> 
@@ -74,33 +87,339 @@
         <section>
             <div class="container">
                 <div class="about-wrapper">
-                    <div class="after" style="margin-left:-85px;"><h1>QUIENES SOMOS</h1></div>
+                    <div class="after"></div>
                     <div class="content">
-                        <h5 class="title mb-3" style="padding-top:20px;">Bienvenidos ...</h5>
-                        <div class="row" style="padding-bottom:20px;">
-                            <div class="col">
-                                <p>AdMouse es una empresa Argentina que lleva más de una década desarrollando Tecnologías de Apoyo (Assistive Technologies) para personas con discapacidad motriz. Nuestros dispositivos permiten a adultos mayores y personas con discapacidad superar problemas de motricidad, Parkinson, Parálisis Cerebral, ACV, y baja visión.</p>
-                                <br>
-                                <p>Nuestras soluciones son altamente valoradas por su eficacia y facilidad de uso tanto por usuarios y terapeutas como por instituciones de máxima jerarquía internacional.</p>
-                            </div>
-                            <div class="col">
-                                <p>AdMouse es utilizado en Clínicas de Rehabilitación y Fisioterapia, Centros de Adultos mayores, Geriátricos, Escuelas Especiales e Instituciones Gubernamentales y son prescriptos por Especialistas en Parkinson, Fisioterapeutas, Médicos Fisiatras, Gerontólogos, Terapistas Ocupacionales y Docentes de Escuelas Especiales.</p>
-                                <br>
-                                <p>AdMouse, cuenta con Distribución Oficial en USA, España, México, Uruguay, etc.</p>
-                            </div>
-                        </div>           
+                        <h4 style="padding-top:20px;text-align:center;padding-bottom:20px;">
+                            En definitiva, AdMouse pretende facilitar a las personas a las que está destinado, mejorar la calidad con la que manejan sus ordenadores y dispositivos móviles permitiéndoles acceder al uso de cualquier aplicación o información con mayor precisión y autonomía.
+                            <br>
+                            AdMouse es utilizado en Clínicas de Rehabilitación y Fisioterapia, Centros de Adultos mayores, Geriátricos, Escuelas Especiales e Instituciones Gubernamentales y son prescriptos por Especialistas en Parkinson, Fisioterapeutas, Médicos Fisiatras, Gerontólogos, Terapistas Ocupacionales y Docentes de Escuelas Especiales.
+                            <br>
+                            Está orientado a niños y adultos que sufren movimientos involuntarios, temblores o parálisis de miembros superiores.
+                        </h4>      
                     </div>
                 </div>        
             </div>     
         </section>
-        <div class="video">
-            <iframe src="assets/imgs/videoIndex.mp4" allowfullscreen></iframe>
-        </div>
+        <section>
+            <div class="container">
+                <div class="about-wrapper" style="background-color:#EAF0FC;padding-bottom:30px;">
+                    <div style="text-align: center;padding-top:20px;">
+                        <img src="./assets/imgs/LogoAdmouse.png" style="display: block; margin-left: auto; margin-right: auto; width: 20%; height: 10%;">
+                    </div>                    
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-6">
+                            <div style="padding-top:30px;padding-bottom:20px;">
+                                <h6 style="line-height: 25px;">
+                                    En el mundo una gran cantidad de personas se ven privadas del uso de las computadoras por medio del mouse tradicional.
+                                    <br>
+                                    Mouse orientado para personas con discapacidad motriz o trastornos del movimiento.
+                                    <br>
+                                    Para aquellos que poseen temblores (Parkinson, ataxia, distonía) este dispositivo permite acercar a estas personas a la informática de forma natural, superando las dificultades que le imponen las actuales tecnologías. <a href="admouse.html" style="text-decoration: underline; color: #0068B3;">Leer más</a>
+                                </h6>
+                            </div>      
+                        </div>
+                        <div class="col-4">
+                            <div style="padding-top:30px;padding-bottom:20px;">
+                                <div id="carousel1" class="carousel slide mx-auto" data-ride="carousel">
+                                    <ul class="carousel-indicators">
+                                        <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carousel1" data-slide-to="1"></li>
+                                        <li data-target="#carousel1" data-slide-to="2"></li>
+                                        <li data-target="#carousel1" data-slide-to="3"></li>
+                                        <li data-target="#carousel1" data-slide-to="4"></li>
+                                        <li data-target="#carousel1" data-slide-to="5"></li>
+                                    </ul>
+                                    <div class="carousel-inner" style="aspect-ratio:3/2; background-color: black;">
+                                        <img class="carousel-item active w-100" src="assets/imgs/mouse.jpg" alt="Imagen 1">
+                                        <img class="carousel-item w-100" src="assets/imgs/mouse2.jpg" alt="Imagen 2">
+                                        <img class="carousel-item w-100" src="assets/imgs/mouse3.jpg" alt="Imagen 3">
+                                        <img class="carousel-item w-100" src="assets/imgs/mouse4.jpg" alt="Imagen 4">
+                                        <img class="carousel-item w-100" src="assets/imgs/mouse5.jpg" alt="Imagen 5">
+                                        <img class="carousel-item w-100" src="assets/imgs/mouse6.jpg" alt="Imagen 6">
+                                    </div>
+                                    <div>
+                                        <a class="carousel-control-prev" href="#carousel1" data-slide="prev">
+                                            <span class="carousel-control-prev-icon"></span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carousel1" data-slide="next">
+                                            <span class="carousel-control-next-icon"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-2">
+                            <a class="nav-link btn btn-primary" href="#"><font color=#FFF><b>Leer manual</b></font></a>
+                        </div>
+                        <div class="col-2">
+                            <a class="nav-link btn btn-primary" href="#"><font color=#FFF><b>Ver manual</b></font></a>
+                        </div>
+                        <div class="col-4"></div>
+                        <div class="col-2"></div>
+                    </div>
+                </div>        
+            </div>     
+        </section>
+        <section>
+            <div class="container">
+                <div class="about-wrapper" style="background-color:#EAF0FC;padding-bottom:30px;">
+                    <div style="text-align: center;padding-top:20px;">
+                        <img src="./assets/imgs/logo AdMouse 500x200/ColorTec/LOGO-removebg-preview.png" alt="colortec" style="display: block; margin-left: auto; margin-right: auto; width: 20%; height: 10%;">
+                    </div>                    
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-6">
+                            <div style="padding-top:30px;padding-bottom:20px;">
+                                <h6 style="line-height: 25px;">
+                                    TECLADO ESPECIAL PARA ADULTOS MAYORES, PERSONAS CON BAJA VISIÓN Y USUARIOS CON DISCAPACIDAD MOTRIZ.
+                                    <br>
+                                    Teclado con letras y números de gran tamaño y colores diferenciados para vocales, consonantes, números, funciones, etc.
+                                    <br>
+                                    Facilita enormemente el tipeo, reduce los errores e incrementa significativamente la inclusión de miles y miles de personas a las TICs.
+                                    <br>
+                                    Disponible, también, de manera opcional un canalizador dactilar específicamente diseñado para este dispositivo. <a href="colortec.html" style="text-decoration: underline; color: #0068B3;">Leer más</a>
+                                </h6>
+                            </div>      
+                        </div>
+                        <div class="col-4">
+                            <div style="padding-top:30px;padding-bottom:20px;">
+                                <div id="carousel2" class="carousel slide mx-auto" data-ride="carousel">
+                                    <ul class="carousel-indicators">
+                                        <li data-target="#carousel2" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carousel2" data-slide-to="1"></li>
+                                        <li data-target="#carousel2" data-slide-to="2"></li>
+                                        <li data-target="#carousel2" data-slide-to="3"></li>
+                                        <li data-target="#carousel2" data-slide-to="4"></li>
+                                    </ul>
+                                    <div class="carousel-inner" style="aspect-ratio:3/2; background-color: black;">
+                                        <img class="carousel-item active w-100" src="assets/imgs/colortec.jpg" alt="Imagen 1">
+                                        <img class="carousel-item w-100" src="assets/imgs/colortec2.jpg" alt="Imagen 2">
+                                        <img class="carousel-item w-100" src="assets/imgs/colortec3.jpg" alt="Imagen 3">
+                                        <img class="carousel-item w-100" src="assets/imgs/colortec4.jpg" alt="Imagen 4">
+                                        <img class="carousel-item w-100" src="assets/imgs/colortec5.jpg" alt="Imagen 5">
+                                    </div>
+                                    <div>
+                                        <a class="carousel-control-prev" href="#carousel2" data-slide="prev">
+                                            <span class="carousel-control-prev-icon"></span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carousel2" data-slide="next">
+                                            <span class="carousel-control-next-icon"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-2">
+                            <a class="nav-link btn btn-primary" href="#"><font color=#FFF><b>Leer manual</b></font></a>
+                        </div>
+                        <div class="col-2">
+                            <a class="nav-link btn btn-primary" href="#"><font color=#FFF><b>Ver manual</b></font></a>
+                        </div>
+                        <div class="col-4"></div>
+                        <div class="col-2"></div>
+                    </div>
+                </div>        
+            </div>     
+        </section>
+        <section>
+            <div class="container">
+                <div class="about-wrapper" style="background-color:#EAF0FC;padding-bottom:30px;">
+                    <div style="text-align: center;padding-top:20px;">
+                        <img src="./assets/imgs/dualmouseLogo.png" alt="colortec" style="display: block; margin-left: auto; margin-right: auto; width: 20%; height: 10%;">
+                    </div>                    
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-6">
+                            <div style="padding-top:30px;padding-bottom:20px;">
+                                <h6 style="line-height: 25px;">
+                                    Modelo que incorpora un joystick com herramienta adicional sin resignar NINGUNA de sus funciones tradicionales. De esta manera, el usuario tendrá la opción de mover el cursor con las flechas, como siempre, o con el mando del joystick.
+                                    <br>
+                                    Sus funciones y la sencillez de uso permiten al usuario emular sin inconvenientes los comandos de un mouse convencional de manera intuitiva. <a href="dualmouse.html" style="text-decoration: underline; color: #0068B3;">Leer más</a>
+                                </h6>
+                            </div>      
+                        </div>
+                        <div class="col-4">
+                            <div style="padding-top:30px;padding-bottom:20px;">
+                                <div id="carousel3" class="carousel slide mx-auto" data-ride="carousel">
+                                    <ul class="carousel-indicators">
+                                        <li data-target="#carousel3" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carousel3" data-slide-to="1"></li>
+                                        <li data-target="#carousel3" data-slide-to="2"></li>
+                                        <li data-target="#carousel3" data-slide-to="3"></li>
+                                        <li data-target="#carousel3" data-slide-to="4"></li>
+                                        <li data-target="#carousel3" data-slide-to="5"></li>
+                                    </ul>
+                                    <div class="carousel-inner" style="aspect-ratio:3/2; background-color: black;">
+                                        <img class="carousel-item active w-100" src="assets/imgs/dualmouse.jpg" alt="Imagen 1">
+                                        <img class="carousel-item w-100" src="assets/imgs/dualmouse2.jpg" alt="Imagen 2">
+                                        <img class="carousel-item w-100" src="assets/imgs/dualmouse3.jpg" alt="Imagen 3">
+                                        <img class="carousel-item w-100" src="assets/imgs/dualmouse4.jpg" alt="Imagen 4">
+                                        <img class="carousel-item w-100" src="assets/imgs/dualmouse5.jpg" alt="Imagen 5">
+                                        <img class="carousel-item w-100" src="assets/imgs/dualmouse6.jpg" alt="Imagen 6">
+                                    </div>
+                                    <div>
+                                        <a class="carousel-control-prev" href="#carousel3" data-slide="prev">
+                                            <span class="carousel-control-prev-icon"></span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carousel3" data-slide="next">
+                                            <span class="carousel-control-next-icon"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-2">
+                            <a class="nav-link btn btn-primary" href="#"><font color=#FFF><b>Leer manual</b></font></a>
+                        </div>
+                        <div class="col-2">
+                            <a class="nav-link btn btn-primary" href="#"><font color=#FFF><b>Ver manual</b></font></a>
+                        </div>
+                        <div class="col-4"></div>
+                        <div class="col-2"></div>
+                    </div>
+                </div>        
+            </div>     
+        </section>
+        <section>
+            <div class="container">
+                <div class="about-wrapper" style="background-color:#EAF0FC;padding-bottom:30px;">
+                    <div style="text-align: center;padding-top:20px;">
+                        <img src="./assets/imgs/logo AdMouse 500x200/BOTON LOGO.jpg" style="display: block; margin-left: auto; margin-right: auto; width: 20%; height: 10%;">
+                    </div>                    
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-6">
+                            <div style="padding-top:30px;padding-bottom:20px;">
+                                <h6 style="line-height: 25px;">
+                                    <font color= #3CBD1C><b>Click adaptado</b></font> a pulsador.
+                                    <br>
+                                    El <font color= #3CBD1C><b>BotónMouse</b></font> es un instrumento orientado a facilitar la ejecución de acciones comúnmente denominadas de ON/OFF (0-1) entre otras.
+                                    <br>
+                                    Mediante el pulsado de la de la parte superior, el usuario podrá activar funciones que le permitan emular a un mouse convencional: click izquierdo, click derecho, click central.
+                                    <br>
+                                    Por defecto el dispositivo se encuentra configurado para realizar la función de click izquierdo. <a href="botonmouse.html" style="text-decoration: underline; color: #0068B3;">Leer más</a>
+                                </h6>
+                            </div>      
+                        </div>
+                        <div class="col-4">
+                            <div style="padding-top:30px;padding-bottom:20px;">
+                                <div id="carousel4" class="carousel slide mx-auto" data-ride="carousel">
+                                    <ul class="carousel-indicators">
+                                        <li data-target="#carousel4" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carousel4" data-slide-to="1"></li>
+                                        <li data-target="#carousel4" data-slide-to="2"></li>
+                                        <li data-target="#carousel4" data-slide-to="3"></li>
+                                        <li data-target="#carousel4" data-slide-to="4"></li>
+                                    </ul>
+                                    <div class="carousel-inner" style="aspect-ratio:3/2; background-color: black;">
+                                        <img class="carousel-item active w-100" src="assets/imgs/boton.jpg" alt="Imagen 1">
+                                        <img class="carousel-item w-100" src="assets/imgs/boton2.jpg" alt="Imagen 2">
+                                        <img class="carousel-item w-100" src="assets/imgs/boton3.jpg" alt="Imagen 3">
+                                        <img class="carousel-item w-100" src="assets/imgs/boton4.jpg" alt="Imagen 4">
+                                        <img class="carousel-item w-100" src="assets/imgs/boton5.jpg" alt="Imagen 5">
+                                    </div>
+                                    <div>
+                                        <a class="carousel-control-prev" href="#carousel4" data-slide="prev">
+                                            <span class="carousel-control-prev-icon"></span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carousel4" data-slide="next">
+                                            <span class="carousel-control-next-icon"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-2">
+                            <a class="nav-link btn btn-primary" href="#"><font color=#FFF><b>Leer manual</b></font></a>
+                        </div>
+                        <div class="col-2">
+                            <a class="nav-link btn btn-primary" href="#"><font color=#FFF><b>Ver manual</b></font></a>
+                        </div>
+                        <div class="col-4"></div>
+                        <div class="col-2"></div>
+                    </div>
+                </div>        
+            </div>     
+        </section>
+        <section>
+            <div class="container">
+                <div class="about-wrapper" style="background-color:#EAF0FC;padding-bottom:30px;">
+                    <div style="text-align: center;padding-top:20px;">
+                        <img src="./assets/imgs/adaptecLogo.jpeg" style="display: block; margin-left: auto; margin-right: auto; width: 20%; height: 10%;">
+                    </div>                    
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-6">
+                            <div style="padding-top:30px;padding-bottom:20px;">
+                                <h6 style="line-height: 25px;">
+                                    Teclado con canalizador dactilar.
+                                    <br>
+                                    Dirigido a personas con Discapacidad Motriz, Parkinson, Parálisis Cerebral, Esclerosis Múltiple, etc.
+                                    <br>
+                                    Cobertor de metacrilato que facilita el <font color= #3CBD1C><b>acceso al PC</b></font> a los usuarios con dificultades en los dedos para teclear o pulsar botones.
+                                    <br>
+                                    <font color= #3CBD1C><b>Evita</b></font> las pulsaciones erróneas accidentales o la pulsación de dos teclas contiguas. <a href="adaptec.html" style="text-decoration: underline; color: #0068B3;">Leer más</a>
+                                </h6>
+                            </div>      
+                        </div>
+                        <div class="col-4">
+                            <div style="padding-top:30px;padding-bottom:20px;">
+                                <div id="carousel5" class="carousel slide mx-auto" data-ride="carousel">
+                                    <ul class="carousel-indicators">
+                                        <li data-target="#carousel5" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carousel5" data-slide-to="1"></li>
+                                    </ul>
+                                    <div class="carousel-inner" style="aspect-ratio:3/2; background-color: black;">
+                                        <img class="carousel-item active w-100" src="assets/imgs/adaptec.jpg" alt="Imagen 1">
+                                        <img class="carousel-item w-100" src="assets/imgs/adaptec2.jpg" alt="Imagen 2">
+                                    </div>
+                                    <div>
+                                        <a class="carousel-control-prev" href="#carousel5" data-slide="prev">
+                                            <span class="carousel-control-prev-icon"></span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carousel5" data-slide="next">
+                                            <span class="carousel-control-next-icon"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-2">
+                            <a class="nav-link btn btn-primary" href="#"><font color=#FFF><b>Leer manual</b></font></a>
+                        </div>
+                        <div class="col-2">
+                            <a class="nav-link btn btn-primary" href="#"><font color=#FFF><b>Ver manual</b></font></a>
+                        </div>
+                        <div class="col-4"></div>
+                        <div class="col-2"></div>
+                    </div>
+                </div>        
+            </div>     
+        </section>
         <section class="pb-0">
             <div class="container">
                 <div class="pre-footer">
-                    <ul class="list">
-                    </ul>
                     <ul class="list">
                         <li class="list-head">
                             <h6 class="font-weight-bold">ADMOUSE</h6>
@@ -108,22 +427,24 @@
                         <li class="list-body">
                             <div class="row">
                                 <div class="col">
-                                    <a class="nav-link" href="#home"><font color=#0068B3><b>INICIO</b></font></a>
+                                    <a class="nav-link" href="index.html"><font color=#0068B3><b>INICIO</b></font></a>
                                     <a class="nav-link" href="quienessomos.html"><font color=#0068B3><b>QUIENES SOMOS</b></font></a>
-                                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+                                    <a class="nav-link dropdown-toggle dropdown-toggle-no-caret" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <font color=#0068B3><b>GALERIA</b></font>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                            <li><a class="dropdown-item" href="fotos.html"><font color=#0068B3><b>FOTOS</b></font></a></li>
-                                            <li><a class="dropdown-item" href="videos.html"><font color=#0068B3><b>VIDEOS</b></font></a></li>
-                                            <li><a class="dropdown-item" href="exposiciones.html"><font color=#0068B3><b>EXPOSICIONES</b></font></a></li>
-                                        </ul>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="fotos.html"><font color=#0068B3><b>FOTOS</b></font></a>
+                                            <a class="dropdown-item" href="videos.html"><font color=#0068B3><b>VIDEOS</b></font></a>
+                                            <a class="dropdown-item" href="exposiciones.html"><font color=#0068B3><b>EXPOSICIONES</b></font></a>
+                                        </div>
                                     </a>
+                                    
                                     <a class="nav-link" href="reconocimientos.html"><font color=#0068B3><b>RECONOCIMIENTOS</b></font></a>
                                     <a class="nav-link" href="contacto.html"><font color=#0068B3><b>CONTACTO</b></font></a>
                                 </div>
                             </div>
                         </li>
                     </ul>
+                    <ul class="list"></ul>
                     <ul class="list">
                         <li class="list-head">
                             <h6 class="font-weight-bold">INFORMACIÓN</h6>

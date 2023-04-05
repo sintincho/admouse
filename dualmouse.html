@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content=".">
+        <meta name="author" content="Devcrud">
+        <title>::Ad Mouse::</title>
+        <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/creative-design.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.7.0/js/bootstrap.min.js"></script>
+        <style>
+            .video iframe {
+                width: 800px;
+                height: 450px;
+            }
+
+            .video {
+                margin-left: auto;
+                margin-right: auto;
+                padding-left:-40px;
+            }
+
+            .navbar-nav {
+                display: flex;
+                align-items: center;
+            }
+
+            .navbar-brand img {
+                max-width: 200px;
+            }
+
+            @media (max-width: 1200px) {
+                .navbar-brand img {
+                    max-width: 150px;
+                }
+            }
+
+            @media (max-width: 992px) {
+                .navbar-brand img {
+                    max-width: 120px;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .navbar-brand img {
+                    max-width: 100px;
+                }
+            }
+
+            @media (max-width: 576px) {
+                .navbar-brand img {
+                    max-width: 80px;
+                }
+            }
+
+            .dropdown-toggle::after {
+                display: none;
+            }
+
+            .dropdown-menu {
+                padding-top: 0;
+            }
+
+        </style>
+    </head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="40">
+        <script>
+            fetch('navbar.html')
+                    .then(response => response.text())
+                    .then(html => {
+                        const parser = new DOMParser();
+                        const doc = parser.parseFromString(html, 'text/html');
+                        const navbar = doc.querySelector('.navbar');
+                        document.body.prepend(navbar);
+                    });
+        </script>
+        <header class="header" style="background: url(assets/imgs/banner.jpg) no-repeat center; background-size: cover;text-align:center; display: flex; justify-content: center; align-items: center;">
+            <div class="overlay"></div>
+            <div class="header-content">
+                <h5>AdMouse y DualMouse les brindan autonomía en el acceso a las PCs, y tablets sin necesidad de un soft adicional.</h5> 
+            </div>      
+        </header>
+        <section>
+            <div class="container">
+                <div class="about-wrapper" style="background-color:#EAF0FC;padding-bottom:30px;">
+                    <div style="text-align: center;padding-top:20px;">
+                        <img src="./assets/imgs/dualmouseLogo.png" alt="colortec" style="display: block; margin-left: auto; margin-right: auto; width: 20%; height: 10%;">
+                    </div>                    
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-6">
+                            <div style="padding-top:30px;padding-bottom:20px;">
+                                <h6 style="line-height: 25px;">
+                                    Modelo que incorpora un joystick com herramienta adicional sin resignar NINGUNA de sus funciones tradicionales. De esta manera, el usuario tendrá la opción de mover el cursor con las flechas, como siempre, o con el mando del joystick.
+                                    <br>
+                                    Sus funciones y la sencillez de uso permiten al usuario emular sin inconvenientes los comandos de un mouse convencional de manera intuitiva. <a href="dualmouse.html" style="text-decoration: underline; color: #0068B3;">Leer más</a>
+                                </h6>
+                            </div>      
+                        </div>
+                        <div class="col-4">
+                            <div style="padding-top:30px;padding-bottom:20px;">
+                                <div id="carousel3" class="carousel slide mx-auto" data-ride="carousel">
+                                    <ul class="carousel-indicators">
+                                        <li data-target="#carousel3" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carousel3" data-slide-to="1"></li>
+                                        <li data-target="#carousel3" data-slide-to="2"></li>
+                                        <li data-target="#carousel3" data-slide-to="3"></li>
+                                        <li data-target="#carousel3" data-slide-to="4"></li>
+                                        <li data-target="#carousel3" data-slide-to="5"></li>
+                                    </ul>
+                                    <div class="carousel-inner" style="aspect-ratio:3/2; background-color: black;">
+                                        <img class="carousel-item active w-100" src="assets/imgs/dualmouse.jpg" alt="Imagen 1">
+                                        <img class="carousel-item w-100" src="assets/imgs/dualmouse2.jpg" alt="Imagen 2">
+                                        <img class="carousel-item w-100" src="assets/imgs/dualmouse3.jpg" alt="Imagen 3">
+                                        <img class="carousel-item w-100" src="assets/imgs/dualmouse4.jpg" alt="Imagen 4">
+                                        <img class="carousel-item w-100" src="assets/imgs/dualmouse5.jpg" alt="Imagen 5">
+                                        <img class="carousel-item w-100" src="assets/imgs/dualmouse6.jpg" alt="Imagen 6">
+                                    </div>
+                                    <div>
+                                        <a class="carousel-control-prev" href="#carousel3" data-slide="prev">
+                                            <span class="carousel-control-prev-icon"></span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carousel3" data-slide="next">
+                                            <span class="carousel-control-next-icon"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-10">
+                            <div style="padding-top:30px;padding-bottom:30px;">
+                                <h6 style="text-align:center;"><font color= #E65009 size="5px"><b>CARACTERISTICAS TÉCNICAS</b></font></h6>
+                                <br>
+                                <h6 style="line-height: 30px;">
+                                    <i class="fa fa-circle" aria-hidden="true" style="font-size: 12px; vertical-align: middle;"></i> Plug and Play.
+                                    <br>
+                                    <i class="fa fa-circle" aria-hidden="true" style="font-size: 12px;vertical-align: middle;"></i> Conexión USB.
+                                    <br>
+                                    <i class="fa fa-circle" aria-hidden="true" style="font-size: 12px;vertical-align: middle;"></i> Teclas especiales para <font color= #3CBD1C><b>doble click y arrastrar</b></font>.
+                                    <br>
+                                    <i class="fa fa-circle" aria-hidden="true" style="font-size: 12px;vertical-align: middle;"></i> Señales <font color= #3CBD1C><b>luminosas y sonoras</b></font>.
+                                    <br>
+                                    <i class="fa fa-circle" aria-hidden="true" style="font-size: 12px;vertical-align: middle;"></i> <font color= #3CBD1C><b>Velocidad y sonido</b></font> configurables.
+                                    <br>
+                                    <i class="fa fa-circle" aria-hidden="true" style="font-size: 12px;vertical-align: middle;"></i> <font color= #3CBD1C><b>Relieve</b></font> especialmente diseñado para evitar pulsaciones involuntarias.
+                                    <br><br>
+                                </h6>
+                                <h6 style="text-align:center;"><font color= #E65009 size="5px"><b>¡¡¡NOVEDAD!!! 2 ratones en uno, más versátil, más completo.<br>Se puede desplazar el cursor tanto con las flechas como con el joystick.</b></font></h6>
+                                <h6 style="line-height: 30px;">
+                                    <br>
+                                    Sus funciones y la sencillez de uso permiten al usuario emular sin inconvenientes los comandos de un mouse convencional de manera intuitiva.
+                                </h6>
+                            </div>      
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-2">
+                            <a class="nav-link btn btn-primary" href="#"><font color=#FFF><b>Leer manual</b></font></a>
+                        </div>
+                        <div class="col-4"></div>
+                        <div class="col-2">
+                            <a class="nav-link btn btn-primary" href="#"><font color=#FFF><b>Ver manual</b></font></a>
+                        </div>
+                        <div class="col-2"></div>
+                    </div>
+                </div>        
+            </div>     
+        </section>
+        <section class="pb-0">
+            <div class="container">
+                <div class="pre-footer">
+                    <ul class="list">
+                        <li class="list-head">
+                            <h6 class="font-weight-bold">ADMOUSE</h6>
+                        </li>
+                        <li class="list-body">
+                            <div class="row">
+                                <div class="col">
+                                    <a class="nav-link" href="index.html"><font color=#0068B3><b>INICIO</b></font></a>
+                                    <a class="nav-link" href="quienessomos.html"><font color=#0068B3><b>QUIENES SOMOS</b></font></a>
+                                    <a class="nav-link dropdown-toggle dropdown-toggle-no-caret" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <font color=#0068B3><b>GALERIA</b></font>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="fotos.html"><font color=#0068B3><b>FOTOS</b></font></a>
+                                            <a class="dropdown-item" href="videos.html"><font color=#0068B3><b>VIDEOS</b></font></a>
+                                            <a class="dropdown-item" href="exposiciones.html"><font color=#0068B3><b>EXPOSICIONES</b></font></a>
+                                        </div>
+                                    </a>
+                                    
+                                    <a class="nav-link" href="reconocimientos.html"><font color=#0068B3><b>RECONOCIMIENTOS</b></font></a>
+                                    <a class="nav-link" href="contacto.html"><font color=#0068B3><b>CONTACTO</b></font></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="list"></ul>
+                    <ul class="list">
+                        <li class="list-head">
+                            <h6 class="font-weight-bold">INFORMACIÓN</h6>
+                        </li>
+                        <li class="list-body" style="line-height:30px;">
+                            <p><i class="ti-location-pin"></i> Ciudad de Buenos Aires, Argentina</p>
+                            <p><i class="ti-email"></i> info@admouse.net</p>
+                            <p><i class="fa fa-phone" aria-hidden="true"></i> (+54)11 4855-8580</p>
+                            <p><i class="fa fa-phone" aria-hidden="true"></i> (+54)11 4854-2898</p>
+                            <div class="social-links">
+                                <a href="https://www.facebook.com/AdmouseAR/" class="link"><i class="ti-facebook"></i></a>
+                                <a href="https://www.youtube.com/channel/UC2V4ZUTHzo5Ncwb-PiRJSvg" class="link"><i class="ti-youtube"></i></a>
+                            </div>
+                        </li>
+                    </ul> 
+                </div>
+                <footer class="footer">            
+                    <p class="mb-0 small">&copy; <script>document.write(new Date().getFullYear())</script>, Powered by <a href="https://www.atlansystem.net" target="_blank"><font color="#000000">Atlansystem e-Solutions.</font></a></p>
+                </footer>
+            </div>    
+        </section>
+        <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+        <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+        <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+        <script src="assets/js/creative-design.js"></script>
+    </body>
+</html>

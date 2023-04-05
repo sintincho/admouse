@@ -11257,7 +11257,7 @@ html {
 }
 
 section {
-  padding: 100px 0;
+  padding: 25px 0;
 }
 
 
@@ -11268,7 +11268,7 @@ video {
 }
 
 section:nth-child(odd) {
-  background-color: #eaf0fc;
+ /* background-color: #eaf0fc; */
 }
 
 section.p-sm {
