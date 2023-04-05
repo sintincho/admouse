@@ -11268,7 +11268,7 @@ video {
 }
 
 section:nth-child(odd) {
-  background-color: #eaf0fc;
+ /* background-color: #eaf0fc; */
 }
 
 section.p-sm {
