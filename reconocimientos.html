@@ -10,51 +10,60 @@
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/creative-design.css">
     </head>
-    <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
-        <nav id="scrollspy" class="navbar page-navbar navbar-light navbar-expand-md fixed-top" style="background-color:#FFF;" data-spy="affix" data-offset-top="20">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="./assets/imgs/LogoAdmouse.jpg" alt="index.html" style="width:300px;">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html"><font color=#0068B3><b>INICIO</b></font></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="quienessomos.html"><font color=#0068B3><b>QUIENES SOMOS</b></font></a>
-                        </li>
-                        <li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
-                                <font color=#0068B3><b>GALERIA</b></font>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="fotos.html"><font color=#0068B3><b>FOTOS</b></font></a></li>
-                                    <li><a class="dropdown-item" href="videos.html"><font color=#0068B3><b>VIDEOS</b></font></a></li>
-                                    <li><a class="dropdown-item" href="exposiciones.html"><font color=#0068B3><b>EXPOSICIONES</b></font></a></li>
-                                </ul>
-                            </a>
-						</li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="reconocimientos.html"><font color=#0068B3><b>RECONOCIMIENTOS</b></font></a>
-                        </li>
-                        <li class="nav-item ml-md-4">
-                            <a class="nav-link btn btn-primary" href="contacto.html"><font color=#FFF><b>CONTACTO</b></font></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <header class="header" style="background: url(assets/imgs/banner.jpg) no-repeat center; background-size: cover;text-align:center;">
-            <div class="overlay"></div>
-            <div class="header-content">
-                <h5>AdMouse y DualMouse les brindan autonomía en el acceso a las PCs, y tablets sin necesidad de un soft adicional.</h5> 
-            </div>      
-        </header>
-        <style>
-    .col {
+    <style>
+        .video iframe {
+            width: 800px;
+            height: 450px;
+        }
+
+        .video {
+            margin-left: auto;
+            margin-right: auto;
+            padding-left:-40px;
+        }
+
+        .navbar-nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand img {
+            max-width: 200px;
+        }
+
+        @media (max-width: 1200px) {
+            .navbar-brand img {
+                max-width: 150px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .navbar-brand img {
+                max-width: 120px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar-brand img {
+                max-width: 100px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .navbar-brand img {
+                max-width: 80px;
+            }
+        }
+
+        .dropdown-toggle::after {
+            display: none;
+        }
+
+        .dropdown-menu {
+            padding-top: 0;
+        }
+        
+        .col {
         width: 100%;
         margin-bottom: 20px;
     }
@@ -82,7 +91,25 @@
             justify-content: center;
         }
     }
-</style>
+    
+    </style>
+    <body data-spy="scroll" data-target=".navbar" data-offset="40">
+        <script>
+            fetch('navbar.html')
+                    .then(response => response.text())
+                    .then(html => {
+                        const parser = new DOMParser();
+                        const doc = parser.parseFromString(html, 'text/html');
+                        const navbar = doc.querySelector('.navbar');
+                        document.body.prepend(navbar);
+                    });
+        </script>
+        <header class="header" style="background: url(assets/imgs/banner.jpg) no-repeat center; background-size: cover;text-align:center; display: flex; justify-content: center; align-items: center;">
+            <div class="overlay"></div>
+            <div class="header-content">
+                <h5>AdMouse y DualMouse les brindan autonomía en el acceso a las PCs, y tablets sin necesidad de un soft adicional.</h5> 
+            </div>      
+        </header>
         <section>
             <div class="container">
                 <div class="after" style="margin-left:auto;text-align:center;"><font color=#0068B3><h2>Reconocimientos y evaluaciones de AdMouse</h2></font></div>

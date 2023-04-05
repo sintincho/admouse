@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content=".">
+        <meta name="description" content="Start your development with Creative Design landing page.">
         <meta name="author" content="Devcrud">
         <title>::Ad Mouse::</title>
         <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
@@ -11,171 +11,187 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.7.0/js/bootstrap.min.js"></script>
     </head>
+    <style>
+        .navbar-nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand img {
+            max-width: 200px;
+        }
+
+        @media (max-width: 1200px) {
+            .navbar-brand img {
+                max-width: 150px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .navbar-brand img {
+                max-width: 120px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar-brand img {
+                max-width: 100px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .navbar-brand img {
+                max-width: 80px;
+            }
+        }
+
+        .dropdown-toggle::after {
+            display: none;
+        }
+
+        .dropdown-menu {
+            padding-top: 0;
+        }
+
+    </style>
     <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
-        <nav id="scrollspy" class="navbar page-navbar navbar-light navbar-expand-md fixed-top" style="background-color:#FFF;" data-spy="affix" data-offset-top="20">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="./assets/imgs/LogoAdmouse.jpg" href="index.html" style="width:300px;">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html"><font color=#0068B3><b>INICIO</b></font></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="quienessomos.html"><font color=#0068B3><b>QUIENES SOMOS</b></font></a>
-                        </li>
-                        <li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
-								<font color=#0068B3><b>GALERIA</b></font>
-							</a>
-							<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-								<li><a class="dropdown-item" href="fotos.html"><font color=#0068B3><b>FOTOS</b></font></a></li>
-								<li><a class="dropdown-item" href="videos.html"><font color=#0068B3><b>VIDEOS</b></font></a></li>
-								<li><a class="dropdown-item" href="exposiciones.html"><font color=#0068B3><b>EXPOSICIONES</b></font></a></li>
-							</ul>
-						</li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="reconocimientos.html"><font color=#0068B3><b>RECONOCIMIENTOS</b></font></a>
-                        </li>
-                        <li class="nav-item ml-md-4">
-                            <a class="nav-link btn btn-primary" href="contacto.html"><font color=#FFF><b>CONTACTO</b></font></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <header class="header" style="background: url(assets/imgs/banner.jpg) no-repeat center; background-size: cover;text-align:center;">
+        <script>
+            fetch('navbar.html')
+                    .then(response => response.text())
+                    .then(html => {
+                        const parser = new DOMParser();
+                        const doc = parser.parseFromString(html, 'text/html');
+                        const navbar = doc.querySelector('.navbar');
+                        document.body.prepend(navbar);
+                    });
+        </script>
+        <header class="header" style="background: url(assets/imgs/banner.jpg) no-repeat center; background-size: cover;text-align:center; display: flex; justify-content: center; align-items: center;">
             <div class="overlay"></div>
             <div class="header-content">
                 <h5>AdMouse y DualMouse les brindan autonomía en el acceso a las PCs, y tablets sin necesidad de un soft adicional.</h5> 
             </div>      
         </header>
-    <br>
-    <section class="section" style="padding-bottom:0px;padding-top:40px;">
-        <div class="container jumbotron jumbotron-fluid mb-3 pt-0 pb-0 bg-lightblue position-relative">
-            <div class="pl-4 pr-0 tofront" style="padding-top:11vh;padding-bottom:11vh;">
-                <div class="row" style="aspect-ratio:3/2;justify-content:center;padding-top: 20px;">
-                    <figure class="col-sm-4" style="text-align:center;">
-                        <video src="assets/imgs/file1.mp4" width="320" height="240" controls></video>
-                        <div style="text-align: center;">
-                            <figcaption><h style="color:#0068B3;">ADMOUSE</h>- Sorteo en ExpoMed</figcaption>
-                        </div>
-                    </figure>
-                    <figure class="col-sm-4" style="text-align:center;">
-                        <video src="assets/imgs/file2.mp4" width="320" height="240" controls></video>
-                        <figcaption><h style="color:#0068B3;">ADMOUSE</h>- Proyecto Samsung Innova-Ing.<br>Sergio Schapira</figcaption>
-                    </figure>
-                    <figure class="col-sm-4" style="text-align:center;">
-                        <video src="assets/imgs/file3.mp4" width="320" height="240" controls></video>
-                        <figcaption><h style="color:#0068B3;">ADMOUSE</h>- Min. Educación Argentina</figcaption>
-                    </figure>
-                    <figure class ="col-sm-4" style="text-align:center;">
-                        <video src="assets/imgs/file4.mp4" width="320" height="240" controls></video>
-                        <figcaption><h style="color:#0068B3;">ADMOUSE</h>- Reseña Cruz Roja Española (Orientatech)</figcaption>
-                    </figure>
-                    <figure class="col-sm-4" style="text-align:center;">
-                        <video src="assets/imgs/file5.mp4" width="320" height="240" controls></video>
-                        <figcaption></figcaption>
-                    </figure>
-                    <figure class="col-sm-4" style="text-align:center;">
-                        <video src="assets/imgs/file6.mp4" width="320" height="240" controls></video>
-                        <figcaption><h style="color:#0068B3;">ADMOUSE</h>- Descripción</figcaption>
-                    </figure>
-                    <figure class="col-sm-4" style="text-align:center;">
-                        <video src="assets/imgs/file7.mp4" width="320" height="240" controls></video>
-                        <figcaption><h style="color:#0068B3;">ADMOUSE</h>- Entrega de Conectar igualdad<br>a los alumnos de Misiones - Argentina</figcaption>
-                    </figure>
-                    <figure class="col-sm-4" style="text-align:center;">
-                        <video src="assets/imgs/file8.mp4" width="320" height="240" controls></video>
-                        <figcaption><h style="color:#0068B3;">ADMOUSE</h>- Las Vivencias de Matías</figcaption>
-                    </figure>
-                    <figure class="col-sm-4" style="text-align:center;">
-                        <video src="assets/imgs/file9.mp4" width="320" height="240" controls></video>
-                        <figcaption><h style="color:#0068B3;">ADMOUSE</h>- Editando Videos con la<br>boca….México</figcaption>
-                    </figure>
-                    <figure class="col-sm-4" style="text-align:center;">
-                        <video src="assets/imgs/file10.mp4" width="320" height="240" controls></video>
-                        <figcaption><h style="color:#0068B3;">ADMOUSE</h>- Conectar Igualdad entrega de Kits Escuelas especiales </figcaption>
-                    </figure>
-                    <figure class="col-sm-4" style="text-align:center;">
-                        <video src="assets/imgs/file11.mp4" width="320" height="240" controls></video>
-                        <figcaption><h style="color:#0068B3;">ADMOUSE</h>y FingerReader 2 ayudas<br>tecnológicas para personas discapacitadas </figcaption>
-                    </figure>
-                    <figure class="col-sm-4" style="text-align:center;">
-                        <video src="assets/imgs/file12.mp4" width="320" height="240" controls></video>
-                        <figcaption><h style="color:#0068B3;">ADMOUSE</h>- ColorTec by AdMouse</figcaption>
-                    </figure>
-                    <figure class="col-sm-6" style="text-align:center;">
-                        <video src="assets/imgs/file13.mp4" width="320" height="240" controls></video>
-                        <figcaption><h style="color:#0068B3;">ADMOUSE</h>- ColorTec by AdMouse</figcaption>
-                    </figure>
-                    <figure class="col-sm-6" style="text-align:center;">
-                        <video src="assets/imgs/file14.mp4" width="320" height="240" controls></video>
-                        <figcaption><h style="color:#0068B3;">ADMOUSE</h>- Min. Educación Argentina</figcaption>
-                    </figure>
-                </div>
-                <br>
-            </div>
-        </div>
-    </section>
-    <section class="pb-0">
-        <div class="container">
-            <div class="pre-footer">
-                <ul class="list">
-                </ul>
-                <ul class="list">
-                    <li class="list-head">
-                        <h6 class="font-weight-bold">ADMOUSE</h6>
-                    </li>
-                    <li class="list-body">
-                        <div class="row">
-                            <div class="col">
-                                <a class="nav-link" href="#home"><font color=#0068B3><b>INICIO</b></font></a>
-                                <a class="nav-link" href="quienessomos.html"><font color=#0068B3><b>QUIENES SOMOS</b></font></a>
-                                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
-                                    <font color=#0068B3><b>GALERIA</b></font>
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="fotos.html"><font color=#0068B3><b>FOTOS</b></font></a></li>
-                                    <li><a class="dropdown-item" href="videos.html"><font color=#0068B3><b>VIDEOS</b></font></a></li>
-                                    <li><a class="dropdown-item" href="exposiciones.html"><font color=#0068B3><b>EXPOSICIONES</b></font></a></li>
-                                </ul>
-                                <a class="nav-link" href="reconocimientos.html"><font color=#0068B3><b>RECONOCIMIENTOS</b></font></a>
-                                <a class="nav-link" href="contacto.html"><font color=#0068B3><b>CONTACTO</b></font></a>
+        <section class="section" style="padding-bottom:0px;padding-top:40px;">
+            <div class="container jumbotron jumbotron-fluid mb-3 pt-0 pb-0 bg-lightblue position-relative">
+                <div class="pl-4 pr-0 tofront" style="padding-top:11vh;padding-bottom:11vh;">
+                    <div class="row" style="aspect-ratio:3/2;justify-content:center;padding-top: 20px;">
+                        <figure class="col-sm-4" style="text-align:center;">
+                            <video src="assets/imgs/file1.mp4" width="320" height="240" controls></video>
+                            <div style="text-align: center;">
+                                <figcaption><h style="color:#0068B3;">ADMOUSE</h>- Sorteo en ExpoMed</figcaption>
                             </div>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="list">
-                    <li class="list-head">
-                        <h6 class="font-weight-bold">INFORMACIÓN</h6>
-                    </li>
-                    <li class="list-body" style="line-height:30px;">
-                        <p><i class="ti-location-pin"></i> Ciudad de Buenos Aires, Argentina</p>
-                        <p><i class="ti-email"></i> info@admouse.net</p>
-                        <p><i class="fa fa-phone" aria-hidden="true"></i> (+54)11 4855-8580</p>
-                        <p><i class="fa fa-phone" aria-hidden="true"></i> (+54)11 4854-2898</p>
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/AdmouseAR/" class="link"><i class="ti-facebook"></i></a>
-                            <a href="https://www.youtube.com/channel/UC2V4ZUTHzo5Ncwb-PiRJSvg" class="link"><i class="ti-youtube"></i></a>
-                        </div>
-                    </li>
-                </ul> 
+                        </figure>
+                        <figure class="col-sm-4" style="text-align:center;">
+                            <video src="assets/imgs/file2.mp4" width="320" height="240" controls></video>
+                            <figcaption><h style="color:#0068B3;">ADMOUSE</h>- Proyecto Samsung Innova-Ing.<br>Sergio Schapira</figcaption>
+                        </figure>
+                        <figure class="col-sm-4" style="text-align:center;">
+                            <video src="assets/imgs/file3.mp4" width="320" height="240" controls></video>
+                            <figcaption><h style="color:#0068B3;">ADMOUSE</h>- Min. Educación Argentina</figcaption>
+                        </figure>
+                        <figure class ="col-sm-4" style="text-align:center;">
+                            <video src="assets/imgs/file4.mp4" width="320" height="240" controls></video>
+                            <figcaption><h style="color:#0068B3;">ADMOUSE</h>- Reseña Cruz Roja Española (Orientatech)</figcaption>
+                        </figure>
+                        <figure class="col-sm-4" style="text-align:center;">
+                            <video src="assets/imgs/file5.mp4" width="320" height="240" controls></video>
+                            <figcaption></figcaption>
+                        </figure>
+                        <figure class="col-sm-4" style="text-align:center;">
+                            <video src="assets/imgs/file6.mp4" width="320" height="240" controls></video>
+                            <figcaption><h style="color:#0068B3;">ADMOUSE</h>- Descripción</figcaption>
+                        </figure>
+                        <figure class="col-sm-4" style="text-align:center;">
+                            <video src="assets/imgs/file7.mp4" width="320" height="240" controls></video>
+                            <figcaption><h style="color:#0068B3;">ADMOUSE</h>- Entrega de Conectar igualdad<br>a los alumnos de Misiones - Argentina</figcaption>
+                        </figure>
+                        <figure class="col-sm-4" style="text-align:center;">
+                            <video src="assets/imgs/file8.mp4" width="320" height="240" controls></video>
+                            <figcaption><h style="color:#0068B3;">ADMOUSE</h>- Las Vivencias de Matías</figcaption>
+                        </figure>
+                        <figure class="col-sm-4" style="text-align:center;">
+                            <video src="assets/imgs/file9.mp4" width="320" height="240" controls></video>
+                            <figcaption><h style="color:#0068B3;">ADMOUSE</h>- Editando Videos con la<br>boca….México</figcaption>
+                        </figure>
+                        <figure class="col-sm-4" style="text-align:center;">
+                            <video src="assets/imgs/file10.mp4" width="320" height="240" controls></video>
+                            <figcaption><h style="color:#0068B3;">ADMOUSE</h>- Conectar Igualdad entrega de Kits Escuelas especiales </figcaption>
+                        </figure>
+                        <figure class="col-sm-4" style="text-align:center;">
+                            <video src="assets/imgs/file11.mp4" width="320" height="240" controls></video>
+                            <figcaption><h style="color:#0068B3;">ADMOUSE</h>y FingerReader 2 ayudas<br>tecnológicas para personas discapacitadas </figcaption>
+                        </figure>
+                        <figure class="col-sm-4" style="text-align:center;">
+                            <video src="assets/imgs/file12.mp4" width="320" height="240" controls></video>
+                            <figcaption><h style="color:#0068B3;">ADMOUSE</h>- ColorTec by AdMouse</figcaption>
+                        </figure>
+                        <figure class="col-sm-6" style="text-align:center;">
+                            <video src="assets/imgs/file13.mp4" width="320" height="240" controls></video>
+                            <figcaption><h style="color:#0068B3;">ADMOUSE</h>- ColorTec by AdMouse</figcaption>
+                        </figure>
+                        <figure class="col-sm-6" style="text-align:center;">
+                            <video src="assets/imgs/file14.mp4" width="320" height="240" controls></video>
+                            <figcaption><h style="color:#0068B3;">ADMOUSE</h>- Min. Educación Argentina</figcaption>
+                        </figure>
+                    </div>
+                    <br>
+                </div>
             </div>
-            <footer class="footer">            
-                <p class="mb-0 small">&copy; <script>document.write(new Date().getFullYear())</script>, Powered by <a href="https://www.atlansystem.net" target="_blank"><font color="#000000">Atlansystem e-Solutions.</font></a></p>
-            </footer>
-        </div>    
-    </section>
-    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
-    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
-    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
-    <script src="assets/js/creative-design.js"></script>
-</body>
+        </section>
+        <section class="pb-0">
+            <div class="container">
+                <div class="pre-footer">
+                    <ul class="list">
+                        <li class="list-head">
+                            <h6 class="font-weight-bold">ADMOUSE</h6>
+                        </li>
+                        <li class="list-body">
+                            <div class="row">
+                                <div class="col">
+                                    <a class="nav-link" href="index.html"><font color=#0068B3><b>INICIO</b></font></a>
+                                    <a class="nav-link" href="quienessomos.html"><font color=#0068B3><b>QUIENES SOMOS</b></font></a>
+                                    <a class="nav-link dropdown-toggle dropdown-toggle-no-caret" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <font color=#0068B3><b>GALERIA</b></font>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="fotos.html"><font color=#0068B3><b>FOTOS</b></font></a>
+                                            <a class="dropdown-item" href="videos.html"><font color=#0068B3><b>VIDEOS</b></font></a>
+                                            <a class="dropdown-item" href="exposiciones.html"><font color=#0068B3><b>EXPOSICIONES</b></font></a>
+                                        </div>
+                                    </a>
+                                    
+                                    <a class="nav-link" href="reconocimientos.html"><font color=#0068B3><b>RECONOCIMIENTOS</b></font></a>
+                                    <a class="nav-link" href="contacto.html"><font color=#0068B3><b>CONTACTO</b></font></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="list"></ul>
+                    <ul class="list">
+                        <li class="list-head">
+                            <h6 class="font-weight-bold">INFORMACIÓN</h6>
+                        </li>
+                        <li class="list-body" style="line-height:30px;">
+                            <p><i class="ti-location-pin"></i> Ciudad de Buenos Aires, Argentina</p>
+                            <p><i class="ti-email"></i> info@admouse.net</p>
+                            <p><i class="fa fa-phone" aria-hidden="true"></i> (+54)11 4855-8580</p>
+                            <p><i class="fa fa-phone" aria-hidden="true"></i> (+54)11 4854-2898</p>
+                            <div class="social-links">
+                                <a href="https://www.facebook.com/AdmouseAR/" class="link"><i class="ti-facebook"></i></a>
+                                <a href="https://www.youtube.com/channel/UC2V4ZUTHzo5Ncwb-PiRJSvg" class="link"><i class="ti-youtube"></i></a>
+                            </div>
+                        </li>
+                    </ul> 
+                </div>
+                <footer class="footer">            
+                    <p class="mb-0 small">&copy; <script>document.write(new Date().getFullYear())</script>, Powered by <a href="https://www.atlansystem.net" target="_blank"><font color="#000000">Atlansystem e-Solutions.</font></a></p>
+                </footer>
+            </div>    
+        </section>
+        <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+        <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+        <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+        <script src="assets/js/creative-design.js"></script>
+    </body>
 </html>

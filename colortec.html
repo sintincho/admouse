@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content=".">
+        <meta name="author" content="Devcrud">
+        <title>::Ad Mouse::</title>
+        <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/creative-design.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.7.0/js/bootstrap.min.js"></script>
+        <style>
+            .video iframe {
+                width: 800px;
+                height: 450px;
+            }
+
+            .video {
+                margin-left: auto;
+                margin-right: auto;
+                padding-left:-40px;
+            }
+
+            .navbar-nav {
+                display: flex;
+                align-items: center;
+            }
+
+            .navbar-brand img {
+                max-width: 200px;
+            }
+
+            @media (max-width: 1200px) {
+                .navbar-brand img {
+                    max-width: 150px;
+                }
+            }
+
+            @media (max-width: 992px) {
+                .navbar-brand img {
+                    max-width: 120px;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .navbar-brand img {
+                    max-width: 100px;
+                }
+            }
+
+            @media (max-width: 576px) {
+                .navbar-brand img {
+                    max-width: 80px;
+                }
+            }
+
+            .dropdown-toggle::after {
+                display: none;
+            }
+
+            .dropdown-menu {
+                padding-top: 0;
+            }
+
+        </style>
+    </head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="40">
+        <script>
+            fetch('navbar.html')
+                    .then(response => response.text())
+                    .then(html => {
+                        const parser = new DOMParser();
+                        const doc = parser.parseFromString(html, 'text/html');
+                        const navbar = doc.querySelector('.navbar');
+                        document.body.prepend(navbar);
+                    });
+        </script>
+        <header class="header" style="background: url(assets/imgs/banner.jpg) no-repeat center; background-size: cover;text-align:center; display: flex; justify-content: center; align-items: center;">
+            <div class="overlay"></div>
+            <div class="header-content">
+                <h5>AdMouse y DualMouse les brindan autonomía en el acceso a las PCs, y tablets sin necesidad de un soft adicional.</h5> 
+            </div>      
+        </header>
+        <section>
+            <div class="container">
+                <div class="about-wrapper" style="background-color:#EAF0FC;padding-bottom:30px;">
+                    <div style="text-align: center;padding-top:20px;">
+                        <img src="./assets/imgs/logo AdMouse 500x200/ColorTec/LOGO-removebg-preview.png" style="display: block; margin-left: auto; margin-right: auto; width: 20%; height: 10%;">
+                    </div>                    
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-6">
+                            <div style="padding-top:30px;padding-bottom:20px;">
+                                <h6 style="line-height: 25px;">
+                                    TECLADO ESPECIAL PARA ADULTOS MAYORES, PERSONAS CON BAJA VISIÓN Y USUARIOS CON DISCAPACIDAD MOTRIZ.
+                                    <br>
+                                    Teclado con letras y números de gran tamaño y colores diferenciados para vocales, consonantes, números, funciones, etc.
+                                    <br>
+                                    Facilita enormemente el tipeo, reduce los errores e incrementa significativamente la inclusión de miles y miles de personas a las TICs.
+                                    <br>
+                                    Disponible, también, de manera opcional un canalizador dactilar específicamente diseñado para este dispositivo. <a href="colortec.html" style="text-decoration: underline; color: #0068B3;">Leer más</a>
+                                </h6>
+                            </div>      
+                        </div>
+                        <div class="col-4">
+                            <div style="padding-top:30px;padding-bottom:20px;">
+                                <div id="carousel2" class="carousel slide mx-auto" data-ride="carousel">
+                                    <ul class="carousel-indicators">
+                                        <li data-target="#carousel2" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carousel2" data-slide-to="1"></li>
+                                        <li data-target="#carousel2" data-slide-to="2"></li>
+                                        <li data-target="#carousel2" data-slide-to="3"></li>
+                                        <li data-target="#carousel2" data-slide-to="4"></li>
+                                    </ul>
+                                    <div class="carousel-inner" style="aspect-ratio:3/2; background-color: black;">
+                                        <img class="carousel-item active w-100" src="assets/imgs/colortec.jpg" alt="Imagen 1">
+                                        <img class="carousel-item w-100" src="assets/imgs/colortec2.jpg" alt="Imagen 2">
+                                        <img class="carousel-item w-100" src="assets/imgs/colortec3.jpg" alt="Imagen 3">
+                                        <img class="carousel-item w-100" src="assets/imgs/colortec4.jpg" alt="Imagen 4">
+                                        <img class="carousel-item w-100" src="assets/imgs/colortec5.jpg" alt="Imagen 5">
+                                    </div>
+                                    <div>
+                                        <a class="carousel-control-prev" href="#carousel2" data-slide="prev">
+                                            <span class="carousel-control-prev-icon"></span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carousel2" data-slide="next">
+                                            <span class="carousel-control-next-icon"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-10">
+                            <div style="padding-top:30px;padding-bottom:30px;">
+                                <h6 style="line-height: 30px;">
+                                    Es un teclado <font color= #E65009><b>QWERTY</b></font> especialmente desarrollado para personas con baja visión y/o dificultades de movimiento en sus miembros superiores.
+                                    <br>
+                                    <i class="fa fa-circle" aria-hidden="true" style="font-size: 12px; vertical-align: middle;"></i> Las teclas se encuentran diferenciadas por colores en 5 grupos: vocales, consonantes, funciones, números y teclas especiales.
+                                    <br>
+                                    <i class="fa fa-circle" aria-hidden="true" style="font-size: 12px;vertical-align: middle;"></i> Su diseño facilita el uso en cualquier dispositivo con entrada USB. Dispositivos: <font color= #E65009><b>PC, Notebook, Tablet, Smart TV</b></font> o celulares
+                                    <br>
+                                    <i class="fa fa-circle" aria-hidden="true" style="font-size: 12px;vertical-align: middle;"></i> ColorTec cuenta con teclas con un tamaño de letra mucho más grande que los teclados convencionales y las mismas son de colores con alto contraste para facilitar la discriminación visual de las letras.
+                                    <br><br>
+                                </h6>
+                                <h6 style="text-align:center;"><font color= #E65009 size="5px"><b>CARACTERISTICAS</b></font></h6>
+                                <h6 style="line-height: 30px;">
+                                    <br>
+                                    <i class="fa fa-circle" aria-hidden="true" style="font-size: 12px;vertical-align: middle;"></i> Superficie de tecla 75% mayor.
+                                    <br>
+                                    <i class="fa fa-circle" aria-hidden="true" style="font-size: 12px;vertical-align: middle;"></i> 5 colores por grupos de teclas.
+                                    <br>
+                                    <i class="fa fa-circle" aria-hidden="true" style="font-size: 12px;vertical-align: middle;"></i> 82 teclas.
+                                    <br>
+                                    <i class="fa fa-circle" aria-hidden="true" style="font-size: 12px;vertical-align: middle;"></i> QWERTY.
+                                    <br>
+                                    <i class="fa fa-circle" aria-hidden="true" style="font-size: 12px;vertical-align: middle;"></i> No necesita software adicional.
+                                    <br>
+                                    <i class="fa fa-circle" aria-hidden="true" style="font-size: 12px;vertical-align: middle;"></i> Compatible con Notebook, Tablets, Celulares y Smart TV.
+                                    <br>
+                                    <i class="fa fa-circle" aria-hidden="true" style="font-size: 12px;vertical-align: middle;"></i> Plug and Play.
+                                    <br>
+                                    <i class="fa fa-circle" aria-hidden="true" style="font-size: 12px;vertical-align: middle;"></i> Conexión USB.
+                                    <br>
+                                </h6>
+                                <h6 style="text-align:center;"><font color= #E65009 size="5px"><b>CanalTec BigKey</b></font></h6>
+                                <h6 style="line-height: 30px;">
+                                    <br>
+                                    <i class="fa fa-circle" aria-hidden="true" style="font-size: 12px;vertical-align: middle;"></i> El canalizador de teclado BigKey es el complemento ideal del pues elimina la posibilidad de presionar simultáneamente más de una tecla y permite decansar el brazo apoyándolo sobre el CanalTec sin presionar las teclas.
+                                    <br>
+                                    <i class="fa fa-circle" aria-hidden="true" style="font-size: 12px;vertical-align: middle;"></i> Se ofrece por separado y permite tipear sin dificultad a personas con movimientos involuntarios.
+                                </h6>
+                            </div>      
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-2">
+                            <a class="nav-link btn btn-primary" href="#"><font color=#FFF><b>Leer manual</b></font></a>
+                        </div>
+                        <div class="col-4"></div>
+                        <div class="col-2">
+                            <a class="nav-link btn btn-primary" href="#"><font color=#FFF><b>Ver manual</b></font></a>
+                        </div>
+                        <div class="col-2"></div>
+                    </div>
+                </div>        
+            </div>     
+        </section>
+        <section class="pb-0">
+            <div class="container">
+                <div class="pre-footer">
+                    <ul class="list">
+                        <li class="list-head">
+                            <h6 class="font-weight-bold">ADMOUSE</h6>
+                        </li>
+                        <li class="list-body">
+                            <div class="row">
+                                <div class="col">
+                                    <a class="nav-link" href="index.html"><font color=#0068B3><b>INICIO</b></font></a>
+                                    <a class="nav-link" href="quienessomos.html"><font color=#0068B3><b>QUIENES SOMOS</b></font></a>
+                                    <a class="nav-link dropdown-toggle dropdown-toggle-no-caret" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <font color=#0068B3><b>GALERIA</b></font>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="fotos.html"><font color=#0068B3><b>FOTOS</b></font></a>
+                                            <a class="dropdown-item" href="videos.html"><font color=#0068B3><b>VIDEOS</b></font></a>
+                                            <a class="dropdown-item" href="exposiciones.html"><font color=#0068B3><b>EXPOSICIONES</b></font></a>
+                                        </div>
+                                    </a>
+                                    
+                                    <a class="nav-link" href="reconocimientos.html"><font color=#0068B3><b>RECONOCIMIENTOS</b></font></a>
+                                    <a class="nav-link" href="contacto.html"><font color=#0068B3><b>CONTACTO</b></font></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="list"></ul>
+                    <ul class="list">
+                        <li class="list-head">
+                            <h6 class="font-weight-bold">INFORMACIÓN</h6>
+                        </li>
+                        <li class="list-body" style="line-height:30px;">
+                            <p><i class="ti-location-pin"></i> Ciudad de Buenos Aires, Argentina</p>
+                            <p><i class="ti-email"></i> info@admouse.net</p>
+                            <p><i class="fa fa-phone" aria-hidden="true"></i> (+54)11 4855-8580</p>
+                            <p><i class="fa fa-phone" aria-hidden="true"></i> (+54)11 4854-2898</p>
+                            <div class="social-links">
+                                <a href="https://www.facebook.com/AdmouseAR/" class="link"><i class="ti-facebook"></i></a>
+                                <a href="https://www.youtube.com/channel/UC2V4ZUTHzo5Ncwb-PiRJSvg" class="link"><i class="ti-youtube"></i></a>
+                            </div>
+                        </li>
+                    </ul> 
+                </div>
+                <footer class="footer">            
+                    <p class="mb-0 small">&copy; <script>document.write(new Date().getFullYear())</script>, Powered by <a href="https://www.atlansystem.net" target="_blank"><font color="#000000">Atlansystem e-Solutions.</font></a></p>
+                </footer>
+            </div>    
+        </section>
+        <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+        <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+        <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+        <script src="assets/js/creative-design.js"></script>
+    </body>
+</html>
