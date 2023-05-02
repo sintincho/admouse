@@ -53,7 +53,6 @@ if wVarNombre = "" then
 		response.Write("document.getElementById('NombreError').innerHTML = 'Debe ingresar un Nombre';")
 		response.Write("document.getElementById('NombreError').style.display = '';")
 		response.Write("document.getElementsByName('wVarNombre')[0].focus();")
-		response.Write("grecaptcha.reset();")
 		response.Write("</script>")
 		response.end
 end if
@@ -62,7 +61,6 @@ if(fregexp(wVarNombre, "^([a-z A-ZÑñÁÉÍÓÚáéíóú]{2,60})$" , 1)) = fal
 		response.Write("document.getElementById('NombreError').innerHTML = 'Debe ingresar un Nombre valido';")
 		response.Write("document.getElementById('NombreError').style.display = '';")
 		response.Write("document.getElementsByName('wVarNombre')[0].focus();")
-		response.Write("grecaptcha.reset();")
 		response.Write("</script>")
 		response.end
 end if
@@ -76,7 +74,6 @@ if wVarApellido = "" then
 		response.Write("document.getElementById('ApellidoError').innerHTML = 'Debe ingresar un Nombre';")
 		response.Write("document.getElementById('ApellidoError').style.display = '';")
 		response.Write("document.getElementsByName('wVarApellido')[0].focus();")
-		response.Write("grecaptcha.reset();")
 		response.Write("</script>")
 		response.end
 end if
@@ -85,7 +82,6 @@ if(fregexp(wVarApellido, "^([a-z A-ZÑñÁÉÍÓÚáéíóú]{2,60})$" , 1)) = f
 		response.Write("document.getElementById('ApellidoError').innerHTML = 'Debe ingresar un Nombre valido';")
 		response.Write("document.getElementById('ApellidoError').style.display = '';")
 		response.Write("document.getElementsByName('wVarApellido')[0].focus();")
-		response.Write("grecaptcha.reset();")
 		response.Write("</script>")
 		response.end
 end if
@@ -100,7 +96,6 @@ if wVarPais = "-1" then
 	response.Write("document.getElementsByName('wVarPais')[0].style.backgroundColor='#FFC1C1';")
 	response.Write("document.getElementById('PaisError').style.display = '';")
 	response.Write("document.getElementsByName('wVarPais')[0].focus();")
-	response.Write("grecaptcha.reset();")
 	response.Write("document.getElementById('loader').style.display='none';")
 	response.Write("</script>")
 	response.end
@@ -111,7 +106,6 @@ if(fregexp(wVarPais, "^([a-z A-ZÑñÁÄÉËÍÏÓÖÚÜáäéëíïóöúü]{2,
 	response.Write("document.getElementsByName('wVarPais')[0].style.backgroundColor='#FFC1C1';")
 	response.Write("document.getElementById('PaisError').style.display = '';")
 	response.Write("document.getElementsByName('wVarPais')[0].focus();")
-	response.Write("grecaptcha.reset();")
 	response.Write("document.getElementById('loader').style.display='none';")
 	response.Write("</script>")
 	response.End()
@@ -136,7 +130,6 @@ if(fregexp(wVarLocalidad, "^([a-z A-ZÑñÁÉÍÓÚáéíóú]{2,60})$" , 1)) = 
 		response.Write("document.getElementById('LocalidadError').innerHTML = 'Debe ingresar una Localidad valida';")
 		response.Write("document.getElementById('LocalidadError').style.display = '';")
 		response.Write("document.getElementsByName('wVarLocalidad')[0].focus();")
-		response.Write("grecaptcha.reset();")
 		response.Write("</script>")
 		response.end
 end if
@@ -172,22 +165,20 @@ response.Write("document.getElementById('StatusError').style.display = 'none';")
 response.Write("</script>")
 
 if wVarEmail = "" then
-		response.Write("<script language='JavaScript'>")
-		response.Write("document.getElementById('EmailError').innerHTML = 'Debe ingresar un E-mail';")
-		response.Write("document.getElementById('EmailError').style.display = '';")
-		response.Write("document.getElementsByName('wVarEmail')[0].focus();")
-		response.Write("grecaptcha.reset();")
-		response.Write("</script>")
-		response.end
+	response.Write("<script language='JavaScript'>")
+	response.Write("document.getElementById('EmailError').innerHTML = 'Debe ingresar un E-mail';")
+	response.Write("document.getElementById('EmailError').style.display = '';")
+	response.Write("document.getElementsByName('wVarEmail')[0].focus();")
+	response.Write("</script>")
+	response.end
 end if
 if(fregexp(wVarEmail, "^[_a-z0-9-]+(.[_a-z0-9-]+)@[a-z0-9-]+(.[a-z0-9-]+)(.[a-z]{2,4})$" , 1)) = false then
-		response.Write("<script type='text/javascript'>")
-		response.Write("document.getElementById('EmailError').innerHTML = 'Debe ingresar un E-mail valido';")
-		response.Write("document.getElementById('EmailError').style.display = '';")
-		response.Write("document.getElementsByName('wVarEmail')[0].focus();")
-		response.Write("grecaptcha.reset();")
-		response.Write("</script>")
-		response.end
+	response.Write("<script type='text/javascript'>")
+	response.Write("document.getElementById('EmailError').innerHTML = 'Debe ingresar un E-mail valido';")
+	response.Write("document.getElementById('EmailError').style.display = '';")
+	response.Write("document.getElementsByName('wVarEmail')[0].focus();")
+	response.Write("</script>")
+	response.end
 end if
 response.Write("<script language='JavaScript'>")
 response.Write("document.getElementById('EmailError').innerHTML = '';")
@@ -196,23 +187,19 @@ response.Write("</script>")
 
 if wVarTelefono = "" then
     response.Write("<script language='JavaScript'>")
-	response.Write("document.getElementById('TelefonoError').innerHTML = '<font color=#8C0108><b>Debe ingresar un Telefono</b></font>';")
-	response.Write("document.getElementsByName('wVarTelefono')[0].style.backgroundColor='#FFC1C1';")
+	response.Write("document.getElementById('TelefonoError').innerHTML = 'Debe ingresar un Telefono';")
 	response.Write("document.getElementById('TelefonoError').style.display = '';")
 	response.Write("document.getElementsByName('wVarTelefono')[0].focus();")
-	response.Write("document.getElementById('loader').style.display='none';")
 	response.Write("</script>")
 	response.end
 end if
 if(fregexp(wVarTelefono, "^([ 0-9+-]{4,20})$" , 1)) = false then
 	response.Write("<script type='text/javascript'>")
-	response.Write("document.getElementById('TelefonoError').innerHTML = '<font color=#8C0108><b>Debe ingresar un Telefono valido</b></font>';")
-	response.Write("document.getElementsByName('wVarTelefono')[0].style.backgroundColor='#FFC1C1';")
+	response.Write("document.getElementById('TelefonoError').innerHTML = 'Debe ingresar un Telefono valido';")
 	response.Write("document.getElementById('TelefonoError').style.display = '';")
 	response.Write("document.getElementsByName('wVarTelefono')[0].focus();")
-	response.Write("document.getElementById('loader').style.display='none';")
 	response.Write("</script>")
-	response.End()
+	response.end
 end if
 response.Write("<script language='JavaScript'>")
 response.Write("document.getElementById('TelefonoError').innerHTML = '';")
@@ -225,7 +212,6 @@ if wVarComentario = "" then
 		response.Write("document.getElementById('ComentarioError').innerHTML = 'Debe ingresar un Asunto';")
 		response.Write("document.getElementById('ComentarioError').style.display = '';")
 		response.Write("document.getElementsByName('wVarComentario')[0].focus();")
-		response.Write("grecaptcha.reset();")
 		response.Write("</script>")
 		response.end
 end if
@@ -234,48 +220,12 @@ if(fregexp(wVarComentario, "^([a-z A-ZÑñÁÉÍÓÚáéíóú]{2,60})$" , 1)) =
 		response.Write("document.getElementById('ComentarioError').innerHTML = 'Debe ingresar un Asunto valido';")
 		response.Write("document.getElementById('ComentarioError').style.display = '';")
 		response.Write("document.getElementsByName('wVarComentario')[0].focus();")
-		response.Write("grecaptcha.reset();")
 		response.Write("</script>")
 		response.end
 end if
 response.Write("<script language='JavaScript'>")
 response.Write("document.getElementById('ComentarioError').innerHTML = '';")
 response.Write("document.getElementById('ComentarioError').style.display = 'none';")
-response.Write("</script>")
-
-if wVarCap = "" then
-	response.Write("<script type='text/javascript'>")
-	response.Write("document.getElementById('CaptaError').innerHTML = '<b>Debe completar el reCAPTCHA</b>';")
-	response.Write("document.getElementById('CaptaError').style.display = '';")
-	response.Write("document.getElementById('CaptaError').focus();")
-	response.Write("grecaptcha.reset();")
-	response.Write("</script>")
-	response.end
-end if
-
-wVarSecret = "6LeK0vYiAAAAALwzVAzGy-oi1js7thTGhJvQ6w6b"
-wVarIP = request.ServerVariables("REMOTE_ADDR")
-wVarURL = "https://www.google.com/recaptcha/api/siteverify?" & "secret=" & wVarSecret & "&response=" & wVarCap & "&remoteip="  & wVarIP
-Set objWinHttp1 = server.CreateObject("WinHttp.WinHttpRequest.5.1")
-	objWinHttp1.SetTimeouts 300000, 300000, 300000, 300000
-	objWinHttp1.Open "POST", wVarURL
-	objWinHttp1.Send
-	wVarCaptaResultado = objWinHttp1.ResponseText
-Set objWinHttp1 = Nothing
-wVarCaptaPase = fregexp(wVarCaptaResultado, "true", 1)
-if wVarCaptaPase <> 1 then
-	response.Write("<script type='text/javascript'>")
-	response.Write("var wVarJsError = 'reCAPTCHA';")
-	response.Write("document.getElementById('CaptaError').innerHTML = 'El reCAPTCHA es invalido';")
-	response.Write("document.getElementById('CaptaError').style.display = '';")
-	response.Write("document.getElementById('CaptaError').focus();")
-	response.Write("grecaptcha.reset();")
-	response.Write("</script>")
-	response.end
-end if
-response.Write("<script type='text/javascript'>")
-response.Write("document.getElementById('CaptaError').innerHTML = '';")
-response.Write("document.getElementById('CaptaError').style.display = 'none';")
 response.Write("</script>")
 
 Set Mail = CreateObject("CDO.Message")
@@ -285,12 +235,12 @@ Set Mail = CreateObject("CDO.Message")
 	Mail.Configuration.Fields.Item ("http://schemas.microsoft.com/cdo/configuration/smtpusessl") = 1
 	Mail.Configuration.Fields.Item ("http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout") = 60
 	Mail.Configuration.Fields.Item ("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate") = 1
-	Mail.Configuration.Fields.Item ("http://schemas.microsoft.com/cdo/configuration/sendusername") = "sashamfiorenza@gmail.com"
-	Mail.Configuration.Fields.Item ("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "A21sd5sd4s6sd87!"
+	Mail.Configuration.Fields.Item ("http://schemas.microsoft.com/cdo/configuration/sendusername") = "sasha@atlansystem.com"
+	Mail.Configuration.Fields.Item ("http://schemas.microsoft.com/cdo/configuration/sendpassword") = "Sashaytiziano23_"
 	Mail.Configuration.Fields.Update
-	Mail.Subject = "FORMULARIO WEB > www.gaudium.com.ar"
-	Mail.From = "sashamfiorenza@gmail.com"
-	Mail.To = "sasha@atlansystem.com"
+	Mail.Subject = "FORMULARIO WEB > www.admouse.com.ar"
+	Mail.From = "sasha@atlansystem.com
+	Mail.To = "sashamfiorenza@gmail.com"
 	Mail.HTMLBody = CharFix("<b>FORMULARIO WEB</b><br><br>""<b>Nombre: </b>" & wVarNombre & ",<br><b>Apellido: </b>" & wVarApellido & ",<br><b>País: </b>" & wVarPais & ",<br><b>Localidad: </b>" & wVarLocalidad & ",<br><b>Status: </b>" & wVarStatus & ",<br><b>E-mail: </b>" & wVarEmail & ",<br><b>Teléfono: </b>" & wVarTelefono & ",<br><b>Comentario: </b>" & wVarComentario)
 	Mail.Send
 Set Mail = Nothing

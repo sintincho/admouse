@@ -14,133 +14,143 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.7.0/js/bootstrap.min.js"></script>
     </head>
-    <style>
-        .navbar-nav {
-            display: flex;
-            align-items: center;
-        }
 
-        .navbar-brand img {
-            max-width: 200px;
-        }
-
-        @media (max-width: 1200px) {
-            .navbar-brand img {
-                max-width: 150px;
-            }
-        }
-
-        @media (max-width: 992px) {
-            .navbar-brand img {
-                max-width: 120px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .navbar-brand img {
-                max-width: 100px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .navbar-brand img {
-                max-width: 80px;
-            }
-        }
-
-        .dropdown-toggle::after {
-            display: none;
-        }
-
-        .dropdown-menu {
-            padding-top: 0;
-        }
-
-    </style>
     <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+        <style>body{font-family: "Times New Roman", Times, serif;}</style>
         <script>
             fetch('navbar.html')
-                    .then(response => response.text())
-                    .then(html => {
-                        const parser = new DOMParser();
-                        const doc = parser.parseFromString(html, 'text/html');
-                        const navbar = doc.querySelector('.navbar');
-                        document.body.prepend(navbar);
-                    });
+            .then(response => response.text())
+            .then(html => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                const navbar = doc.querySelector('.navbar');
+                document.body.prepend(navbar);
+            });
         </script>
+        
         <header class="header" style="background: url(assets/imgs/banner.jpg) no-repeat center; background-size: cover;text-align:center; display: flex; justify-content: center; align-items: center;">
             <div class="overlay"></div>
             <div class="header-content">
                 <h5>AdMouse y DualMouse les brindan autonomía en el acceso a las PCs, y tablets sin necesidad de un soft adicional.</h5> 
             </div>      
         </header>
+
         <section class="section" style="padding-bottom:0px;padding-top:40px;">
-            <div class="container jumbotron jumbotron-fluid mb-3 pt-0 pb-0 bg-lightblue position-relative">
-                <div class="pl-4 pr-0 tofront" style="padding-top:11vh;padding-bottom:11vh;">
-                    <div class="row" style="aspect-ratio:3/2;justify-content:center;padding-top: 20px;">
-                        <figure class="col-sm-4" style="text-align:center;">
-                            <video src="assets/imgs/file1.mp4" width="320" height="240" controls></video>
-                            <div style="text-align: center;">
-                                <figcaption><h style="color:#0068B3;">ADMOUSE</h>- Sorteo en ExpoMed</figcaption>
-                            </div>
-                        </figure>
-                        <figure class="col-sm-4" style="text-align:center;">
-                            <video src="assets/imgs/file2.mp4" width="320" height="240" controls></video>
-                            <figcaption><h style="color:#0068B3;">ADMOUSE</h>- Proyecto Samsung Innova-Ing.<br>Sergio Schapira</figcaption>
-                        </figure>
-                        <figure class="col-sm-4" style="text-align:center;">
-                            <video src="assets/imgs/file3.mp4" width="320" height="240" controls></video>
-                            <figcaption><h style="color:#0068B3;">ADMOUSE</h>- Min. Educación Argentina</figcaption>
-                        </figure>
-                        <figure class ="col-sm-4" style="text-align:center;">
-                            <video src="assets/imgs/file4.mp4" width="320" height="240" controls></video>
-                            <figcaption><h style="color:#0068B3;">ADMOUSE</h>- Reseña Cruz Roja Española (Orientatech)</figcaption>
-                        </figure>
-                        <figure class="col-sm-4" style="text-align:center;">
-                            <video src="assets/imgs/file5.mp4" width="320" height="240" controls></video>
-                            <figcaption></figcaption>
-                        </figure>
-                        <figure class="col-sm-4" style="text-align:center;">
-                            <video src="assets/imgs/file6.mp4" width="320" height="240" controls></video>
-                            <figcaption><h style="color:#0068B3;">ADMOUSE</h>- Descripción</figcaption>
-                        </figure>
-                        <figure class="col-sm-4" style="text-align:center;">
-                            <video src="assets/imgs/file7.mp4" width="320" height="240" controls></video>
-                            <figcaption><h style="color:#0068B3;">ADMOUSE</h>- Entrega de Conectar igualdad<br>a los alumnos de Misiones - Argentina</figcaption>
-                        </figure>
-                        <figure class="col-sm-4" style="text-align:center;">
-                            <video src="assets/imgs/file8.mp4" width="320" height="240" controls></video>
-                            <figcaption><h style="color:#0068B3;">ADMOUSE</h>- Las Vivencias de Matías</figcaption>
-                        </figure>
-                        <figure class="col-sm-4" style="text-align:center;">
-                            <video src="assets/imgs/file9.mp4" width="320" height="240" controls></video>
-                            <figcaption><h style="color:#0068B3;">ADMOUSE</h>- Editando Videos con la<br>boca….México</figcaption>
-                        </figure>
-                        <figure class="col-sm-4" style="text-align:center;">
-                            <video src="assets/imgs/file10.mp4" width="320" height="240" controls></video>
-                            <figcaption><h style="color:#0068B3;">ADMOUSE</h>- Conectar Igualdad entrega de Kits Escuelas especiales </figcaption>
-                        </figure>
-                        <figure class="col-sm-4" style="text-align:center;">
-                            <video src="assets/imgs/file11.mp4" width="320" height="240" controls></video>
-                            <figcaption><h style="color:#0068B3;">ADMOUSE</h>y FingerReader 2 ayudas<br>tecnológicas para personas discapacitadas </figcaption>
-                        </figure>
-                        <figure class="col-sm-4" style="text-align:center;">
-                            <video src="assets/imgs/file12.mp4" width="320" height="240" controls></video>
-                            <figcaption><h style="color:#0068B3;">ADMOUSE</h>- ColorTec by AdMouse</figcaption>
-                        </figure>
-                        <figure class="col-sm-6" style="text-align:center;">
-                            <video src="assets/imgs/file13.mp4" width="320" height="240" controls></video>
-                            <figcaption><h style="color:#0068B3;">ADMOUSE</h>- ColorTec by AdMouse</figcaption>
-                        </figure>
-                        <figure class="col-sm-6" style="text-align:center;">
-                            <video src="assets/imgs/file14.mp4" width="320" height="240" controls></video>
-                            <figcaption><h style="color:#0068B3;">ADMOUSE</h>- Min. Educación Argentina</figcaption>
-                        </figure>
+            <div class="container jumbotron jumbotron-fluid bg-lightblue position-relative">
+                <div class="row">
+                    <div class="videos" style="text-align: center;">
+                        <video controls class="col-12" width="320" height="240">
+                            <source src="assets/imgs/file1.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video> 
+                        <h3>Sorteo en ExpoMed</h3>
                     </div>
-                    <br>
+
+                    <div class="videos" style="text-align: center;">
+                        <video controls class="col-12" width="320" height="240">
+                            <source src="assets/imgs/file2.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video> 
+                        <h3>Proyecto Samsung Innova <br> Ing. Sergio Schapira</h3>
+                    </div>
+
+                    <div class="videos" style="text-align: center;">
+                        <video controls class="col-12" width="320" height="240">
+                            <source src="assets/imgs/file3.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video> 
+                        <h3>Min. Educación Argentina</h3>
+                    </div>
+            
+                    <div class="videos" style="text-align: center;">
+                        <video controls class="col-12" width="320" height="240">
+                            <source src="assets/imgs/file4.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video> 
+                        <h3>Reseña Cruz Roja Española (Orientatech)</h3>
+                    </div>
+
+                    <div class="videos" style="text-align: center;">
+                        <video controls class="col-12" width="320" height="240">
+                            <source src="assets/imgs/file5.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video> 
+                    </div>
+
+                    <div class="videos" style="text-align: center;">
+                        <video controls class="col-12" width="320" height="240">
+                            <source src="assets/imgs/file6.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video> 
+                    </div>
+
+                    <div class="videos" style="text-align: center;">
+                        <video controls class="col-12" width="320" height="240">
+                            <source src="assets/imgs/file7.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video> 
+                        <h3>Entrega de Conectar igualdad a los alumnos de Misiones (Argentina)</h3>
+                    </div>
+
+                    <div class="videos" style="text-align: center;">
+                        <video controls class="col-12" width="320" height="240">
+                            <source src="assets/imgs/file8.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video> 
+                        <h3>Las Vivencias de Matías</h3>
+                    </div>
+
+                    <div class="videos" style="text-align: center;">
+                        <video controls class="col-12" width="320" height="240">
+                            <source src="assets/imgs/file9.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video> 
+                        <h3>Editando Videos con la boca… <br> México</h3>
+                    </div>
+
+                    <div class="videos" style="text-align: center;">
+                        <video controls class="col-12" width="320" height="240">
+                            <source src="assets/imgs/file10.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video> 
+                        <h3>Conectar Igualdad entrega de Kits Escuelas especiales</h3>
+                    </div>
+
+                    <div class="videos" style="text-align: center;">
+                        <video controls class="col-12" width="320" height="240">
+                            <source src="assets/imgs/file11.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video> 
+                        <h3>AdMouse y FingerReader <br> 2 ayudas tecnológicas para personas discapacitadas</h3>
+                    </div>
+
+                    <div class="videos" style="text-align: center;">
+                        <video controls class="col-12" width="320" height="240">
+                            <source src="assets/imgs/file12.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video> 
+                        <h3>ColorTec by AdMouse</h3>
+                    </div>
+
+                    <div class="videos" style="text-align: center;">
+                        <video controls class="col-12" width="320" height="240">
+                            <source src="assets/imgs/file13.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video> 
+                        <h3>ColorTec by AdMouse</h3>
+                    </div>
+
+                    <div class="videos" style="text-align: center;">
+                        <video controls class="col-12" width="320" height="240">
+                            <source src="assets/imgs/file14.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video> 
+                        <h3>Min. Educación Argentina</h3>
+                    </div>
                 </div>
             </div>
         </section>
+        
         <section class="pb-0">
             <div class="container">
                 <div class="pre-footer">

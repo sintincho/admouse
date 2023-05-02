@@ -12,6 +12,73 @@
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
+
+
+.products { display: flex; } 
+.manual { flex: 0 0 16.66667%; max-width: 16.66667%; padding: 1%;} /* COL-2 */
+.carouselIndex { flex: 0 0 33.33333%; max-width: 33.33333%; } /* COL-4 */
+.texto { flex: 0 0 66.66666%; max-width: 66.66666%; line-height: 25px; } /* COL-8 */
+.videos { flex: 0 0 50%; max-width: 50%; padding: 2%; } /* COL-6 */
+.quienesSomos { display: flex; flex-direction: row; }
+
+
+link[rel="icon"] { background-color: transparent; }
+
+.video iframe { width: 800px; height: 450px; }
+.video {  margin-left: auto;  margin-right: auto; padding-left:-40px; }
+
+.navbar-nav { display: flex; align-items: center; }
+.navbar-brand img { max-width: 200px; }
+
+@media (max-width: 1200px) { .navbar-brand img { max-width: 150px; } }
+@media (max-width:  992px) { 
+  .navbar-brand img { max-width: 120px; } 
+  .products { flex-direction: column-reverse; }
+  .manual { flex: 0 0 50%; max-width: 50%; padding: 1%; } /* COL-6 */
+  .texto { flex: 0 0 100%; max-width: 100%; padding: 5%; line-height: 18px; } /* COL-12 */
+  .carouselIndex { flex: 0 0 100%; max-width: 100%; padding: 5%; } /* COL-12 */
+  .videos  { flex: 0 0 100%; max-width: 100%; margin-bottom: 25px; margin-top: 25px; } /* COL-12 */
+  .col { width: 50%; margin-bottom: 20px; }
+  .after { margin-left: 25%; }
+  .content { display: flex; flex-wrap: wrap; justify-content: center; }
+  .quienesSomos { flex-direction: column; }
+}
+@media (max-width:  768px) { .navbar-brand img { max-width: 100px; } }
+@media (max-width:  576px) { 
+  .navbar-brand img { max-width:  80px; } 
+  .col { width: 50%; margin-bottom: 20px;}
+}
+
+.dropdown-toggle::after { display: none; }
+.dropdown-menu { padding-top: 0; }
+
+.col {  width: 100%; margin-bottom: 20px; }
+
+.carousel-container { display: flex; overflow: hidden; position: relative; }
+.carousel-item { position: relative; }
+.carousel-item img { width: 100%; height: auto; }
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
 @import url("https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&display=swap");
 :root {
   --blue: #79A9F5;

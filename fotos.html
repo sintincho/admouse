@@ -14,60 +14,20 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.7.0/js/bootstrap.min.js"></script>
     </head>
-    <style>
-        .navbar-nav {
-            display: flex;
-            align-items: center;
-        }
 
-        .navbar-brand img {
-            max-width: 200px;
-        }
-
-        @media (max-width: 1200px) {
-            .navbar-brand img {
-                max-width: 150px;
-            }
-        }
-
-        @media (max-width: 992px) {
-            .navbar-brand img {
-                max-width: 120px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .navbar-brand img {
-                max-width: 100px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .navbar-brand img {
-                max-width: 80px;
-            }
-        }
-
-        .dropdown-toggle::after {
-            display: none;
-        }
-
-        .dropdown-menu {
-            padding-top: 0;
-        }
-
-    </style>
     <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+        <style>body{font-family: "Times New Roman", Times, serif;}</style>
         <script>
             fetch('navbar.html')
-                    .then(response => response.text())
-                    .then(html => {
-                        const parser = new DOMParser();
-                        const doc = parser.parseFromString(html, 'text/html');
-                        const navbar = doc.querySelector('.navbar');
-                        document.body.prepend(navbar);
-                    });
+            .then(response => response.text())
+            .then(html => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                const navbar = doc.querySelector('.navbar');
+                document.body.prepend(navbar);
+            });
         </script>
+        
         <header class="header" style="background: url(assets/imgs/banner.jpg) no-repeat center; background-size: cover;text-align:center; display: flex; justify-content: center; align-items: center;">
             <div class="overlay"></div>
             <div class="header-content">
@@ -95,7 +55,7 @@
                     </div>
                     <div>
                         <div class="carousel-caption">
-                            <img src="./assets/imgs/LogoAdmouse.png" alt="index.html" style="height:40px; width: 50%; background-color: white; border-radius: 5px;">
+                            <img src="./assets/imgs/Logos/AdMouse.png" alt="AdMouse" style="height:40px; width: 50%; border-radius: 5px;">
                         </div>
                         <a class="carousel-control-prev" href="#carousel1" data-slide="prev">
                             <span class="carousel-control-prev-icon"></span>
@@ -122,7 +82,7 @@
                     </div>
                     <div>
                         <div class="carousel-caption">
-                            <img src="./assets/imgs/logo AdMouse 500x200/ColorTec/LOGO-removebg-preview.png" alt="colortec" style="height:40px; width: 50%; background-color: white; border-radius: 5px;">
+                            <img src="./assets/imgs/Logos/ColorTec.png" alt="ColorTec" style="height:40px; width: 50%; border-radius: 5px;">
                         </div>
                         <a class="carousel-control-prev" href="#carousel2" data-slide="prev">
                             <span class="carousel-control-prev-icon"></span>
@@ -151,7 +111,7 @@
                     </div>
                     <div>
                         <div class="carousel-caption">
-                            <img src="./assets/imgs/dualmouseLogo.png" alt="DualMouse" style="height:40px; width: 50%; background-color: white; border-radius: 5px;">
+                            <img src="./assets/imgs/Logos/DualMouse.png" alt="DualMouse" style="height:40px; width: 50%; border-radius: 5px;">
                         </div>
                         <a class="carousel-control-prev" href="#carousel3" data-slide="prev">
                             <span class="carousel-control-prev-icon"></span>
@@ -182,7 +142,7 @@
                     </div>
                     <div>
                         <div class="carousel-caption">
-                            <img src="./assets/imgs/logo AdMouse 500x200/BOTON LOGO.png" alt="BotonMouse" style="height:40px; width: 50%; background-color: white; border-radius: 5px;">
+                            <img src="./assets/imgs/Logos/BotonMouse.png" alt="BotonMouse" style="height:40px; width: 50%; border-radius: 5px;">
                         </div>
                         <a class="carousel-control-prev" href="#carousel4" data-slide="prev">
                             <span class="carousel-control-prev-icon"></span>
@@ -205,7 +165,7 @@
                     </div>
                     <div>
                         <div class="carousel-caption">
-                            <img src="./assets/imgs/adaptecLogo.png" alt="adaptec" style="height:40px; width: 50%; background-color: white; border-radius: 5px;">
+                            <img src="./assets/imgs/Logos/AdapTec.png" alt="AdapTec"style="height:40px; width: 50%; border-radius: 5px;">
                         </div>
                         <a class="carousel-control-prev" href="#carousel5" data-slide="prev">
                             <span class="carousel-control-prev-icon"></span>

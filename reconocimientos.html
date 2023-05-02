@@ -3,194 +3,111 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content=".">
+        <meta name="description" content="Start your development with Creative Design landing page.">
         <meta name="author" content="Devcrud">
         <title>::Ad Mouse::</title>
         <link rel="icon" href="assets/imgs/favicon.ico">
         <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/creative-design.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.7.0/js/bootstrap.min.js"></script>
     </head>
-    <style>
-        .video iframe {
-            width: 800px;
-            height: 450px;
-        }
 
-        .video {
-            margin-left: auto;
-            margin-right: auto;
-            padding-left:-40px;
-        }
-
-        .navbar-nav {
-            display: flex;
-            align-items: center;
-        }
-
-        .navbar-brand img {
-            max-width: 200px;
-        }
-
-        @media (max-width: 1200px) {
-            .navbar-brand img {
-                max-width: 150px;
-            }
-        }
-
-        @media (max-width: 992px) {
-            .navbar-brand img {
-                max-width: 120px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .navbar-brand img {
-                max-width: 100px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .navbar-brand img {
-                max-width: 80px;
-            }
-        }
-
-        .dropdown-toggle::after {
-            display: none;
-        }
-
-        .dropdown-menu {
-            padding-top: 0;
-        }
-        
-        .col {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    @media (min-width: 576px) {
-        .col {
-            width: 50%;
-            margin-bottom: 20px;
-        }
-    }
-
-    @media (min-width: 992px) {
-        .col {
-            width: 50%;
-            margin-bottom: 20px;
-        }
-
-        .after {
-            margin-left: 25%;
-        }
-
-        .content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-    }
-    
-    </style>
-    <body data-spy="scroll" data-target=".navbar" data-offset="40">
+    <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+        <style>body{font-family: "Times New Roman", Times, serif;}</style>
         <script>
             fetch('navbar.html')
-                    .then(response => response.text())
-                    .then(html => {
-                        const parser = new DOMParser();
-                        const doc = parser.parseFromString(html, 'text/html');
-                        const navbar = doc.querySelector('.navbar');
-                        document.body.prepend(navbar);
-                    });
+            .then(response => response.text())
+            .then(html => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                const navbar = doc.querySelector('.navbar');
+                document.body.prepend(navbar);
+            });
         </script>
+        
         <header class="header" style="background: url(assets/imgs/banner.jpg) no-repeat center; background-size: cover;text-align:center; display: flex; justify-content: center; align-items: center;">
             <div class="overlay"></div>
             <div class="header-content">
                 <h5>AdMouse y DualMouse les brindan autonomía en el acceso a las PCs, y tablets sin necesidad de un soft adicional.</h5> 
             </div>      
         </header>
+
         <section>
             <div class="container">
-                <div class="after" style="margin-left:auto;text-align:center;"><font color=#0068B3><b><h2>Reconocimientos y evaluaciones de AdMouse</h2></b></font></div>
-                <div class="content">
-                    <div class="row">
-                        <div class="col md-6">
-                            <h5 class="title mb-3" style="padding-top:22px;text-align:center;"><font color=#0068B3><br>Caso Clínico ColorTec BigKey by AdMouse<br>-Lic. Fga. Natalia Ibarra<br></font></h5>
-                            <div style="text-align:center;">
-                                <a class="btn btn-primary" href="assets/pdfs/CASO CLíNICO Colortec Bigkey de Admouse - Lic. Fga. Natalia Ibarra.pdf" target="_blank"><font color=#FFF><b>Leer más</b></font></a>
-                            </div>
-                            <br>
-                            <img src="assets/imgs/reconocimientos1.png" class="w-100">
-                        </div>
-                        <div class="col md-6">
-                            <h5 class="title mb-3" style="padding-top:160px;text-align:center;"></h5>
-                            <img src="assets/imgs/reconocimientos2.png" class="w-100">
+                <div class="after" style="margin-left:auto;text-align:center;"><font color=#0068B3><h2>Reconocimientos y evaluaciones de AdMouse</h2></font></div>
+                <div class="content row jumbotron jumbotron-fluid bg-lightblue" style="padding: 30px;">
+                    <div class="videos" style="padding: 15px;">
+                        <img src="assets/imgs/reconocimientos1.png" class="w-100">
+                        <h5 class="title mb-3" style="text-align:center;"><font color=#0068B3>Caso Clínico ColorTec BigKey by AdMouse <br> Lic. Fga. Natalia Ibarra</font></h5>
+                        <div style="text-align:center;">
+                            <a class="btn btn-primary" href="assets/pdfs/CASO CLíNICO Colortec Bigkey de Admouse - Lic. Fga. Natalia Ibarra.pdf" target="_blank"><font color=#FFF><b>Leer más</b></font></a>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col md-6">
-                            <h5 class="title mb-3" style="padding-top:20px;text-align:center;"><br><br><br></h5>
-                            <div style="text-align:center;">
-                                <a class="btn btn-primary" href="assets/pdfs/AEDIN_EXPERIENCIA_ADMOUSE.pdf" target="_blank"><font color=#FFF><b>Leer más</b></font></a>
-                            </div>
-                            <br>
-                            <img src="assets/imgs/reconocimientos3.png" class="w-100">
-                        </div>
-                        <div class="col md-6">
-                            <h5 class="title mb-3" style="padding-top:20px;text-align:center;"><br><br><br></h5>
-                            <div style="text-align:center;">
-                                <a class="btn btn-primary" href="https://accesibilidadyalfabetizaciondigital.blogspot.com/2022/06/escritura-con-el-teclado-expandido.html" target="_blank"><font color=#FFF><b>Leer más</b></font></a>
-                            </div>
-                            <br>
-                            <img src="assets/imgs/reconocimientos4.png" class="w-100">
+                    
+                    <div class="videos" style="padding: 15px;">
+                        <h5 class="title mb-3" style="text-align:center;"></h5>
+                        <img src="assets/imgs/reconocimientos2.png" class="w-100">
+                    </div>
+
+                    <div class="videos" style="padding: 15px;">
+                        <img src="assets/imgs/reconocimientos3.png" class="w-100">
+                        <h5 class="title mb-3" style="text-align:center;"></h5>
+                        <div style="text-align:center;">
+                            <a class="btn btn-primary" href="assets/pdfs/AEDIN_EXPERIENCIA_ADMOUSE.pdf" target="_blank"><font color=#FFF><b>Leer más</b></font></a>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col md-6">
-                            <h5 class="title mb-3" style="padding-top:40px;text-align:center;color:#0068B3"><br><br>ADMOUSE en Asociación Parkinson Madrid<br></h5>
-                            <img src="assets/imgs/reconocimientos5.png" class="w-100">
-                        </div>
-                        <div class="col md-6">
-                            <h5 class="title mb-3" style="padding-top:40px;text-align:center;color:#0068B3"><br><br>ADMOUSE Facilita la inclusión a las TICs<br></h5>
-                            <img src="assets/imgs/reconocimientos6.png" class="w-100">
+
+                    <div class="videos" style="padding: 15px;">
+                        <img src="assets/imgs/reconocimientos4.png" class="w-100">
+                        <h5 class="title mb-3" style="text-align:center;"></h5>
+                        <div style="text-align:center;">
+                            <a class="btn btn-primary" href="https://accesibilidadyalfabetizaciondigital.blogspot.com/2022/06/escritura-con-el-teclado-expandido.html" target="_blank"><font color=#FFF><b>Leer más</b></font></a>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col md-6">
-                            <h5 class="title mb-3" style="padding-top:40px;text-align:center;color:#0068B3"><br><br>ADMOUSE Seleccionado por Samsung como Proyecto<br>Innovador Finalista</h5>
-                            <img src="assets/imgs/reconocimientos7.png" class="w-100">
-                        </div>
-                        <div class="col md-6">
-                            <h5 class="title mb-3" style="padding-top:40px;text-align:center;color:#0068B3"><br><br>ADMOUSE Reseñado en el Newsletter del<br>CEAPAT - Madrid, España</h5>
-                            <img src="assets/imgs/reconocimientos8.png" class="w-100">
-                        </div>
+
+                    <div class="videos" style="padding: 15px;">
+                        <img src="assets/imgs/reconocimientos5.png" class="w-100">
+                        <h5 class="title mb-3" style="text-align:center;color:#0068B3">ADMOUSE en Asociación Parkinson Madrid</h5>
                     </div>
-                    <div class="row">
-                        <div class="col md-6" style="padding-top:32px;text-align:center;"><br><br><br><br>
-                            <img src="assets/imgs/reconocimientos9.png" class="w-100">
-                        </div>
-                        <div class="col md-6">
-                            <h5 class="title mb-3" style="padding-top:40px;text-align:center;color:#0068B3"><br><br>ADMOUSE Evaluado por Fundación TECSOS España<br></h5>
-                            <img src="assets/imgs/reconocimientos10.png" class="w-100">
-                        </div>
+
+                    <div class="videos" style="padding: 15px;">
+                        <img src="assets/imgs/reconocimientos6.png" class="w-100">
+                        <h5 class="title mb-3" style="text-align:center;color:#0068B3">ADMOUSE Facilita la inclusión a las TICs</h5>
                     </div>
-                    <div class="row">
-                        <div class="col md-6">
-                            <h5 class="title mb-3" style="padding-top:40px;text-align:center;color:#0068B3"><br><br>ADMOUSE recibió el auspicio de la UNESCO por<br>su contribución a la igualdad de oportunidades<br>y por facilitar la inclusión a las TICs<br>de personas con discapacidad</h5>
-                            <img src="assets/imgs/reconocimientos11.png" class="w-100">
-                        </div>
-                        <div class="col md-6"></div>
-                    </div>                     
-                </div>     
+
+                    <div class="videos" style="padding: 15px;">
+                        <img src="assets/imgs/reconocimientos7.png" class="w-100">
+                        <h5 class="title mb-3" style="text-align:center;color:#0068B3">ADMOUSE Seleccionado por Samsung como Proyecto Innovador Finalista</h5>
+                    </div>
+
+                    <div class="videos" style="padding: 15px;">
+                        <img src="assets/imgs/reconocimientos8.png" class="w-100">
+                        <h5 class="title mb-3" style="text-align:center;color:#0068B3">ADMOUSE Reseñado en el Newsletter del CEAPAT <br> Madrid, España</h5>
+                    </div>
+
+                    <div class="videos" style="padding: 15px;">
+                        <img src="assets/imgs/reconocimientos9.png" class="w-100">
+                    </div>
+
+                    <div class="videos" style="padding: 15px;">
+                        <img src="assets/imgs/reconocimientos10.png" class="w-100">
+                        <h5 class="title mb-3" style="text-align:center;color:#0068B3">ADMOUSE Evaluado por Fundación TECSOS <br> España</h5>
+                    </div>
+
+                    <div class="videos" style="padding: 15px;">
+                        <img src="assets/imgs/reconocimientos11.png" class="w-100">
+                        <h5 class="title mb-3" style="text-align:center;color:#0068B3">ADMOUSE recibió el auspicio de la UNESCO por su contribución a la igualdad de oportunidades y por facilitar la inclusión a las TICs de personas con discapacidad</h5>
+                    </div>
+                </div>
             </div>     
         </section>
+
         <section class="pb-0">
             <div class="container">
                 <div class="pre-footer">
-                    <ul class="list">
-                    </ul>
                     <ul class="list">
                         <li class="list-head">
                             <h6 class="font-weight-bold">ADMOUSE</h6>
@@ -198,22 +115,24 @@
                         <li class="list-body">
                             <div class="row">
                                 <div class="col">
-                                    <a class="nav-link" href="#home"><font color=#0068B3><b>INICIO</b></font></a>
+                                    <a class="nav-link" href="index.html"><font color=#0068B3><b>INICIO</b></font></a>
                                     <a class="nav-link" href="quienessomos.html"><font color=#0068B3><b>QUIENES SOMOS</b></font></a>
-                                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+                                    <a class="nav-link dropdown-toggle dropdown-toggle-no-caret" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <font color=#0068B3><b>GALERIA</b></font>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="fotos.html"><font color=#0068B3><b>FOTOS</b></font></a>
+                                            <a class="dropdown-item" href="videos.html"><font color=#0068B3><b>VIDEOS</b></font></a>
+                                            <a class="dropdown-item" href="exposiciones.html"><font color=#0068B3><b>EXPOSICIONES</b></font></a>
+                                        </div>
                                     </a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <li><a class="dropdown-item" href="fotos.html"><font color=#0068B3><b>FOTOS</b></font></a></li>
-                                        <li><a class="dropdown-item" href="videos.html"><font color=#0068B3><b>VIDEOS</b></font></a></li>
-                                        <li><a class="dropdown-item" href="exposiciones.html"><font color=#0068B3><b>EXPOSICIONES</b></font></a></li>
-                                    </ul>
+                                    
                                     <a class="nav-link" href="reconocimientos.html"><font color=#0068B3><b>RECONOCIMIENTOS</b></font></a>
                                     <a class="nav-link" href="contacto.html"><font color=#0068B3><b>CONTACTO</b></font></a>
                                 </div>
                             </div>
                         </li>
                     </ul>
+                    <ul class="list"></ul>
                     <ul class="list">
                         <li class="list-head">
                             <h6 class="font-weight-bold">INFORMACIÓN</h6>
@@ -235,6 +154,7 @@
                 </footer>
             </div>    
         </section>
+
         <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
         <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
         <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>

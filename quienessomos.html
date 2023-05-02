@@ -3,81 +3,45 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content=".">
+        <meta name="description" content="Start your development with Creative Design landing page.">
         <meta name="author" content="Devcrud">
         <title>::Ad Mouse::</title>
         <link rel="icon" href="assets/imgs/favicon.ico">
         <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/creative-design.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.7.0/js/bootstrap.min.js"></script>
     </head>
-    <style>
-        .navbar-nav {
-            display: flex;
-            align-items: center;
-        }
 
-        .navbar-brand img {
-            max-width: 200px;
-        }
-
-        @media (max-width: 1200px) {
-            .navbar-brand img {
-                max-width: 150px;
-            }
-        }
-
-        @media (max-width: 992px) {
-            .navbar-brand img {
-                max-width: 120px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .navbar-brand img {
-                max-width: 100px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .navbar-brand img {
-                max-width: 80px;
-            }
-        }
-
-        .dropdown-toggle::after {
-            display: none;
-        }
-
-        .dropdown-menu {
-            padding-top: 0;
-        }
-
-    </style>
     <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+        <style>body{font-family: "Times New Roman", Times, serif;}</style>
         <script>
             fetch('navbar.html')
-                    .then(response => response.text())
-                    .then(html => {
-                        const parser = new DOMParser();
-                        const doc = parser.parseFromString(html, 'text/html');
-                        const navbar = doc.querySelector('.navbar');
-                        document.body.prepend(navbar);
-                    });
+            .then(response => response.text())
+            .then(html => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                const navbar = doc.querySelector('.navbar');
+                document.body.prepend(navbar);
+            });
         </script>
+        
         <header class="header" style="background: url(assets/imgs/banner.jpg) no-repeat center; background-size: cover;text-align:center; display: flex; justify-content: center; align-items: center;">
             <div class="overlay"></div>
             <div class="header-content">
                 <h5>AdMouse y DualMouse les brindan autonomía en el acceso a las PCs, y tablets sin necesidad de un soft adicional.</h5> 
             </div>      
         </header>
+
         <section>
             <div class="container">
                 <div class="about-wrapper">
                     <div class="after" style="margin-left:-85px;"><h1>QUIENES SOMOS</h1></div>
                     <div class="content">
                         <h5 class="title mb-3" style="padding-top:20px;">Bienvenidos...</h5>
-                        <div class="row" style="padding-bottom:20px;">
+                        <div class="quienesSomos" style="padding-bottom:20px;">
                             <div class="col">
                                 <p><img src="./assets/imgs/LogoAdmouse.jpg" style="width:70px; margin-bottom: 10px;"> es una empresa Argentina que lleva más de una década desarrollando Tecnologías de Apoyo (Assistive Technologies) para personas con discapacidad motriz. Nuestros dispositivos permiten a adultos mayores y personas con discapacidad superar problemas de motricidad, Parkinson, Parálisis Cerebral, ACV, y baja visión.</p>
                                 <br>
@@ -93,6 +57,7 @@
                 </div>
             </div>
         </section>
+
         <section class="pb-0">
             <div class="container">
                 <div class="pre-footer">
