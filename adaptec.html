@@ -3,11 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content=".">
+        <meta name="description" content="Start your development with Creative Design landing page.">
         <meta name="author" content="Devcrud">
         <title>::Ad Mouse::</title>
+        <link rel="icon" href="assets/imgs/favicon.ico">
         <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/creative-design.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -15,18 +15,19 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.7.0/js/bootstrap.min.js"></script>
     </head>
 
-    <body data-spy="scroll" data-target=".navbar" data-offset="40">
+    <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+        <style>body{font-family: "Arial Rounded MT Bold", sans-serif;}</style>
         <script>
             fetch('navbar.html')
-                    .then(response => response.text())
-                    .then(html => {
-                        const parser = new DOMParser();
-                        const doc = parser.parseFromString(html, 'text/html');
-                        const navbar = doc.querySelector('.navbar');
-                        document.body.prepend(navbar);
-                    });
+            .then(response => response.text())
+            .then(html => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                const navbar = doc.querySelector('.navbar');
+                document.body.prepend(navbar);
+            });
         </script>
-
+        
         <header class="header" style="background: url(assets/imgs/banner.jpg) no-repeat center; background-size: cover;text-align:center; display: flex; justify-content: center; align-items: center;">
             <div class="overlay"></div>
             <div class="header-content">

@@ -16,18 +16,18 @@
     </head>
 
     <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
-       <!-- Navbar -->
-       <script>
-        fetch('navbar.html')
-              .then(response => response.text())
-                .then(html => {
-                    const parser = new DOMParser();
-                    const doc = parser.parseFromString(html, 'text/html');
-                    const navbar = doc.querySelector('.navbar');
-                    document.body.prepend(navbar);
-                });
+        <style>body{font-family: "Arial Rounded MT Bold", sans-serif;}</style>
+        <script>
+            fetch('navbar.html')
+            .then(response => response.text())
+            .then(html => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                const navbar = doc.querySelector('.navbar');
+                document.body.prepend(navbar);
+            });
         </script>
-
+        
         <header class="header" style="background: url(assets/imgs/banner.jpg) no-repeat center; background-size: cover;text-align:center;">
             <div class="overlay"></div>
             <div class="header-content">
