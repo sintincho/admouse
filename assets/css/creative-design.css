@@ -20,6 +20,7 @@
 .texto { flex: 0 0 66.66666%; max-width: 66.66666%; line-height: 25px; } /* COL-8 */
 .videos { flex: 0 0 50%; max-width: 50%; padding: 2%; } /* COL-6 */
 .quienesSomos { display: flex; flex-direction: row; }
+.logo { flex: 0 0 66.66666%; max-width: 66.66666%; }
 
 
 link[rel="icon"] { background-color: transparent; }
@@ -47,6 +48,8 @@ link[rel="icon"] { background-color: transparent; }
 @media (max-width:  576px) { 
   .navbar-brand img { max-width:  80px; } 
   .col { width: 50%; margin-bottom: 20px;}
+}@media (max-width:  540px) { 
+  .logo { flex: 0 0 100%; max-width: 100%; }
 }
 
 .dropdown-toggle::after { display: none; }
