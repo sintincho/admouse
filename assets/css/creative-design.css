@@ -30,6 +30,7 @@ link[rel="icon"] { background-color: transparent; }
 
 .navbar-nav { display: flex; align-items: center; }
 .navbar-brand img { max-width: 200px; }
+.bg-lightblue { background-color: #cadaed  !important; }
 
 @media (max-width: 1200px) { .navbar-brand img { max-width: 150px; } }
 @media (max-width:  992px) { 
